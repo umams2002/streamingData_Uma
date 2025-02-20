@@ -7260,3 +7260,529 @@
 2025-02-07 11:41:38.093 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a trick! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-07 11:41:38', 'category': 'other', 'sentiment': 0.57, 'keyword_mentioned': 'other', 'message_length': 35}
 2025-02-07 11:41:43.096 | INFO     | __main__:main:158 - {'message': 'I just loved an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-07 11:41:43', 'category': 'other', 'sentiment': 0.5, 'keyword_mentioned': 'other', 'message_length': 34}
 2025-02-07 11:41:43.101 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-07 11:41:43', 'category': 'other', 'sentiment': 0.5, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:20:08.329 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-20 14:20:08.329 | INFO     | __main__:<module>:50 - Project root: C:\Users\A2645055\source\repos\44671\streamingData_Uma
+2025-02-20 14:20:08.329 | INFO     | __main__:<module>:54 - Data folder: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data
+2025-02-20 14:20:08.329 | INFO     | __main__:<module>:58 - Data file: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data\buzz_live.json
+2025-02-20 14:20:08.329 | INFO     | __main__:main:125 - START producer...
+2025-02-20 14:20:08.329 | INFO     | __main__:main:126 - Hit CTRL c (or CMD c) to close.
+2025-02-20 14:20:08.329 | INFO     | __main__:get_message_interval:40 - Message interval: 3 seconds
+2025-02-20 14:20:08.329 | INFO     | __main__:main:134 - {'message': 'I just loved an app! It was exciting.', 'author': 'Bob'}
+2025-02-20 14:20:11.349 | INFO     | __main__:main:134 - {'message': 'I just saw a meme! It was exciting.', 'author': 'Alice'}
+2025-02-20 14:20:14.353 | INFO     | __main__:main:134 - {'message': 'I just tried a meme! It was exciting.', 'author': 'Alice'}
+2025-02-20 14:20:17.356 | INFO     | __main__:main:134 - {'message': 'I just shared a meme! It was funny.', 'author': 'Charlie'}
+2025-02-20 14:20:20.359 | INFO     | __main__:main:134 - {'message': 'I just shared a story! It was boring.', 'author': 'Bob'}
+2025-02-20 14:20:23.362 | INFO     | __main__:main:134 - {'message': 'I just saw a story! It was boring.', 'author': 'Bob'}
+2025-02-20 14:20:26.365 | INFO     | __main__:main:134 - {'message': 'I just saw an app! It was weird.', 'author': 'Eve'}
+2025-02-20 14:20:29.368 | INFO     | __main__:main:134 - {'message': 'I just found a meme! It was amazing.', 'author': 'Bob'}
+2025-02-20 14:20:32.371 | INFO     | __main__:main:134 - {'message': 'I just saw an app! It was boring.', 'author': 'Bob'}
+2025-02-20 14:20:35.374 | INFO     | __main__:main:134 - {'message': 'I just shared a trick! It was amazing.', 'author': 'Charlie'}
+2025-02-20 14:20:38.377 | INFO     | __main__:main:134 - {'message': 'I just saw a movie! It was amazing.', 'author': 'Bob'}
+2025-02-20 14:20:39.692 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-20 14:20:39.692 | INFO     | __main__:<module>:38 - Project root: C:\Users\A2645055\source\repos\44671\streamingData_Uma
+2025-02-20 14:20:39.692 | INFO     | __main__:<module>:39 - Data folder: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data
+2025-02-20 14:20:39.692 | INFO     | __main__:<module>:40 - Data file: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data\buzz_live.json
+2025-02-20 14:20:40.132 | INFO     | __main__:main:157 - START consumer.
+2025-02-20 14:20:41.380 | INFO     | __main__:main:134 - {'message': 'I just loved a meme! It was amazing.', 'author': 'Charlie'}
+2025-02-20 14:20:41.650 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just loved a meme! It was amazing.', 'author': 'Charlie'}
+2025-02-20 14:20:41.650 | INFO     | __main__:process_message:123 - Message received from author: Charlie with sentiment: 0.0
+2025-02-20 14:20:41.650 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 1}
+2025-02-20 14:20:41.876 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just loved a meme! It was amazing.", "author": "Charlie"}
+
+2025-02-20 14:20:44.383 | INFO     | __main__:main:134 - {'message': 'I just found a movie! It was amazing.', 'author': 'Alice'}
+2025-02-20 14:20:44.389 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just found a movie! It was amazing.', 'author': 'Alice'}
+2025-02-20 14:20:44.390 | INFO     | __main__:process_message:123 - Message received from author: Alice with sentiment: 0.0
+2025-02-20 14:20:44.391 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 1, 'Alice': 1}
+2025-02-20 14:20:44.463 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just found a movie! It was amazing.", "author": "Alice"}
+
+2025-02-20 14:20:47.386 | INFO     | __main__:main:134 - {'message': 'I just loved a story! It was weird.', 'author': 'Charlie'}
+2025-02-20 14:20:47.486 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just loved a story! It was weird.', 'author': 'Charlie'}
+2025-02-20 14:20:47.486 | INFO     | __main__:process_message:123 - Message received from author: Charlie with sentiment: 0.0
+2025-02-20 14:20:47.486 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 2, 'Alice': 1}
+2025-02-20 14:20:47.579 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just loved a story! It was weird.", "author": "Charlie"}
+
+2025-02-20 14:20:50.390 | INFO     | __main__:main:134 - {'message': 'I just tried a story! It was amazing.', 'author': 'Eve'}
+2025-02-20 14:20:50.591 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just tried a story! It was amazing.', 'author': 'Eve'}
+2025-02-20 14:20:50.592 | INFO     | __main__:process_message:123 - Message received from author: Eve with sentiment: 0.0
+2025-02-20 14:20:50.593 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 2, 'Alice': 1, 'Eve': 1}
+2025-02-20 14:20:50.667 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just tried a story! It was amazing.", "author": "Eve"}
+
+2025-02-20 14:20:53.393 | INFO     | __main__:main:134 - {'message': 'I just loved a movie! It was weird.', 'author': 'Eve'}
+2025-02-20 14:20:53.676 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just loved a movie! It was weird.', 'author': 'Eve'}
+2025-02-20 14:20:53.677 | INFO     | __main__:process_message:123 - Message received from author: Eve with sentiment: 0.0
+2025-02-20 14:20:53.678 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 2, 'Alice': 1, 'Eve': 2}
+2025-02-20 14:20:53.747 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just loved a movie! It was weird.", "author": "Eve"}
+
+2025-02-20 14:20:56.397 | INFO     | __main__:main:134 - {'message': 'I just saw a meme! It was amazing.', 'author': 'Alice'}
+2025-02-20 14:20:56.757 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just saw a meme! It was amazing.', 'author': 'Alice'}
+2025-02-20 14:20:56.757 | INFO     | __main__:process_message:123 - Message received from author: Alice with sentiment: 0.0
+2025-02-20 14:20:56.758 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 2, 'Alice': 2, 'Eve': 2}
+2025-02-20 14:20:56.837 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just saw a meme! It was amazing.", "author": "Alice"}
+
+2025-02-20 14:20:59.400 | INFO     | __main__:main:134 - {'message': 'I just tried an app! It was exciting.', 'author': 'Charlie'}
+2025-02-20 14:20:59.847 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just tried an app! It was exciting.', 'author': 'Charlie'}
+2025-02-20 14:20:59.847 | INFO     | __main__:process_message:123 - Message received from author: Charlie with sentiment: 0.0
+2025-02-20 14:20:59.848 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 3, 'Alice': 2, 'Eve': 2}
+2025-02-20 14:21:00.082 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just tried an app! It was exciting.", "author": "Charlie"}
+
+2025-02-20 14:21:02.403 | INFO     | __main__:main:134 - {'message': 'I just loved a trick! It was weird.', 'author': 'Bob'}
+2025-02-20 14:21:02.589 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just loved a trick! It was weird.', 'author': 'Bob'}
+2025-02-20 14:21:02.590 | INFO     | __main__:process_message:123 - Message received from author: Bob with sentiment: 0.0
+2025-02-20 14:21:02.590 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 3, 'Alice': 2, 'Eve': 2, 'Bob': 1}
+2025-02-20 14:21:02.632 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just loved a trick! It was weird.", "author": "Bob"}
+
+2025-02-20 14:21:05.407 | INFO     | __main__:main:134 - {'message': 'I just shared a trick! It was funny.', 'author': 'Charlie'}
+2025-02-20 14:21:05.640 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just shared a trick! It was funny.', 'author': 'Charlie'}
+2025-02-20 14:21:05.642 | INFO     | __main__:process_message:123 - Message received from author: Charlie with sentiment: 0.0
+2025-02-20 14:21:05.642 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 4, 'Alice': 2, 'Eve': 2, 'Bob': 1}
+2025-02-20 14:21:05.673 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just shared a trick! It was funny.", "author": "Charlie"}
+
+2025-02-20 14:21:08.410 | INFO     | __main__:main:134 - {'message': 'I just shared a movie! It was boring.', 'author': 'Eve'}
+2025-02-20 14:21:08.692 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just shared a movie! It was boring.', 'author': 'Eve'}
+2025-02-20 14:21:08.692 | INFO     | __main__:process_message:123 - Message received from author: Eve with sentiment: 0.0
+2025-02-20 14:21:08.692 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 4, 'Alice': 2, 'Eve': 3, 'Bob': 1}
+2025-02-20 14:21:08.718 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just shared a movie! It was boring.", "author": "Eve"}
+
+2025-02-20 14:21:11.418 | INFO     | __main__:main:134 - {'message': 'I just found a meme! It was funny.', 'author': 'Alice'}
+2025-02-20 14:21:11.730 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just found a meme! It was funny.', 'author': 'Alice'}
+2025-02-20 14:21:11.731 | INFO     | __main__:process_message:123 - Message received from author: Alice with sentiment: 0.0
+2025-02-20 14:21:11.732 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 4, 'Alice': 3, 'Eve': 3, 'Bob': 1}
+2025-02-20 14:21:11.768 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just found a meme! It was funny.", "author": "Alice"}
+
+2025-02-20 14:21:14.420 | INFO     | __main__:main:134 - {'message': 'I just loved an app! It was boring.', 'author': 'Bob'}
+2025-02-20 14:21:14.776 | INFO     | __main__:process_message:116 - Processed JSON message: {'message': 'I just loved an app! It was boring.', 'author': 'Bob'}
+2025-02-20 14:21:14.776 | INFO     | __main__:process_message:123 - Message received from author: Bob with sentiment: 0.0
+2025-02-20 14:21:14.776 | INFO     | __main__:process_message:129 - Updated author counts: {'Charlie': 4, 'Alice': 3, 'Eve': 3, 'Bob': 2}
+2025-02-20 14:21:14.845 | INFO     | __main__:process_message:135 - Chart updated successfully for message: {"message": "I just loved an app! It was boring.", "author": "Bob"}
+
+2025-02-20 14:21:17.424 | INFO     | __main__:main:134 - {'message': 'I just tried an app! It was boring.', 'author': 'Eve'}
+2025-02-20 14:21:20.427 | INFO     | __main__:main:134 - {'message': 'I just shared an app! It was weird.', 'author': 'Alice'}
+2025-02-20 14:21:23.430 | INFO     | __main__:main:134 - {'message': 'I just shared a movie! It was boring.', 'author': 'Alice'}
+2025-02-20 14:21:26.432 | INFO     | __main__:main:134 - {'message': 'I just shared a story! It was amazing.', 'author': 'Charlie'}
+2025-02-20 14:21:29.435 | INFO     | __main__:main:134 - {'message': 'I just saw a story! It was exciting.', 'author': 'Bob'}
+2025-02-20 14:21:32.438 | INFO     | __main__:main:134 - {'message': 'I just found a story! It was amazing.', 'author': 'Alice'}
+2025-02-20 14:21:35.442 | INFO     | __main__:main:134 - {'message': 'I just loved a movie! It was boring.', 'author': 'Eve'}
+2025-02-20 14:21:38.445 | INFO     | __main__:main:134 - {'message': 'I just found an app! It was exciting.', 'author': 'Bob'}
+2025-02-20 14:21:41.449 | INFO     | __main__:main:134 - {'message': 'I just loved a trick! It was weird.', 'author': 'Bob'}
+2025-02-20 14:21:44.452 | INFO     | __main__:main:134 - {'message': 'I just tried a meme! It was amazing.', 'author': 'Bob'}
+2025-02-20 14:21:47.455 | INFO     | __main__:main:134 - {'message': 'I just found a meme! It was weird.', 'author': 'Alice'}
+2025-02-20 14:21:50.458 | INFO     | __main__:main:134 - {'message': 'I just shared a trick! It was amazing.', 'author': 'Eve'}
+2025-02-20 14:21:53.461 | INFO     | __main__:main:134 - {'message': 'I just shared an app! It was funny.', 'author': 'Charlie'}
+2025-02-20 14:21:56.463 | INFO     | __main__:main:134 - {'message': 'I just loved a story! It was amazing.', 'author': 'Charlie'}
+2025-02-20 14:21:59.466 | INFO     | __main__:main:134 - {'message': 'I just shared a meme! It was amazing.', 'author': 'Alice'}
+2025-02-20 14:22:02.469 | INFO     | __main__:main:134 - {'message': 'I just found an app! It was amazing.', 'author': 'Eve'}
+2025-02-20 14:22:05.472 | INFO     | __main__:main:134 - {'message': 'I just found a movie! It was boring.', 'author': 'Bob'}
+2025-02-20 14:22:08.474 | INFO     | __main__:main:134 - {'message': 'I just loved a story! It was exciting.', 'author': 'Bob'}
+2025-02-20 14:22:11.477 | INFO     | __main__:main:134 - {'message': 'I just loved a story! It was weird.', 'author': 'Charlie'}
+2025-02-20 14:24:26.356 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-20 14:24:26.356 | INFO     | __main__:main:138 - START producer...
+2025-02-20 14:24:26.510 | INFO     | __main__:main:151 - Kafka producer connected to localhost:9092
+2025-02-20 14:24:26.513 | INFO     | __main__:main:158 - {'message': 'I just loved a movie! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:26', 'category': 'entertainment', 'sentiment': 0.35, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:24:26.524 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a movie! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:26', 'category': 'entertainment', 'sentiment': 0.35, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:24:31.526 | INFO     | __main__:main:158 - {'message': 'I just saw Python! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:31', 'category': 'tech', 'sentiment': 0.54, 'keyword_mentioned': 'Python', 'message_length': 32}
+2025-02-20 14:24:31.529 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw Python! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:31', 'category': 'tech', 'sentiment': 0.54, 'keyword_mentioned': 'Python', 'message_length': 32}
+2025-02-20 14:24:36.531 | INFO     | __main__:main:158 - {'message': 'I just loved travel! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:24:36', 'category': 'travel', 'sentiment': 0.21, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:24:36.531 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved travel! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:24:36', 'category': 'travel', 'sentiment': 0.21, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:24:41.536 | INFO     | __main__:main:158 - {'message': 'I just found a meme! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:41', 'category': 'humor', 'sentiment': 0.52, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-20 14:24:41.536 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a meme! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:41', 'category': 'humor', 'sentiment': 0.52, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-20 14:24:46.541 | INFO     | __main__:main:158 - {'message': 'I just loved recipe! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:46', 'category': 'food', 'sentiment': 0.25, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-20 14:24:46.541 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved recipe! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:46', 'category': 'food', 'sentiment': 0.25, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-20 14:24:51.545 | INFO     | __main__:main:158 - {'message': 'I just saw recipe! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:24:51', 'category': 'food', 'sentiment': 0.62, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:24:51.549 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw recipe! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:24:51', 'category': 'food', 'sentiment': 0.62, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:24:56.552 | INFO     | __main__:main:158 - {'message': 'I just loved game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:56', 'category': 'gaming', 'sentiment': 0.81, 'keyword_mentioned': 'game', 'message_length': 32}
+2025-02-20 14:24:56.552 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:24:56', 'category': 'gaming', 'sentiment': 0.81, 'keyword_mentioned': 'game', 'message_length': 32}
+2025-02-20 14:25:01.557 | INFO     | __main__:main:158 - {'message': 'I just found recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:01', 'category': 'food', 'sentiment': 0.01, 'keyword_mentioned': 'recipe', 'message_length': 37}
+2025-02-20 14:25:01.557 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:01', 'category': 'food', 'sentiment': 0.01, 'keyword_mentioned': 'recipe', 'message_length': 37}
+2025-02-20 14:25:06.562 | INFO     | __main__:main:158 - {'message': 'I just saw travel! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:25:06', 'category': 'travel', 'sentiment': 0.78, 'keyword_mentioned': 'travel', 'message_length': 33}
+2025-02-20 14:25:06.562 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw travel! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:25:06', 'category': 'travel', 'sentiment': 0.78, 'keyword_mentioned': 'travel', 'message_length': 33}
+2025-02-20 14:25:11.567 | INFO     | __main__:main:158 - {'message': 'I just tried a trick! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:11', 'category': 'other', 'sentiment': 0.03, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-20 14:25:11.570 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a trick! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:11', 'category': 'other', 'sentiment': 0.03, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-20 14:25:11.921 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-20 14:25:11.921 | INFO     | __main__:<module>:38 - Project root: C:\Users\A2645055\source\repos\44671\streamingData_Uma
+2025-02-20 14:25:11.921 | INFO     | __main__:<module>:39 - Data folder: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data
+2025-02-20 14:25:11.921 | INFO     | __main__:<module>:40 - Data file: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data\project_live.json
+2025-02-20 14:25:12.266 | INFO     | __main__:main:171 - START consumer.
+2025-02-20 14:25:16.572 | INFO     | __main__:main:158 - {'message': 'I just shared Python! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-20 14:25:16', 'category': 'tech', 'sentiment': 0.28, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-20 14:25:16.572 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared Python! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-20 14:25:16', 'category': 'tech', 'sentiment': 0.28, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-20 14:25:16.785 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared Python! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-20 14:25:16', 'category': 'tech', 'sentiment': 0.28, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-20 14:25:16.785 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:25:16.785 | INFO     | __main__:process_message:143 - Updated author counts: {'tech': 1}
+2025-02-20 14:25:17.046 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared Python! It was amazing.", "author": "Alice", "timestamp": "2025-02-20 14:25:16", "category": "tech", "sentiment": 0.28, "keyword_mentioned": "Python", "message_length": 37}
+
+2025-02-20 14:25:21.576 | INFO     | __main__:main:158 - {'message': 'I just tried a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:25:21', 'category': 'other', 'sentiment': 1.0, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:25:21.576 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:25:21', 'category': 'other', 'sentiment': 1.0, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:25:22.063 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:25:21', 'category': 'other', 'sentiment': 1.0, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:25:22.063 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:25:22.063 | INFO     | __main__:process_message:143 - Updated author counts: {'tech': 1, 'other': 1}
+2025-02-20 14:25:22.151 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried a story! It was boring.", "author": "Alice", "timestamp": "2025-02-20 14:25:21", "category": "other", "sentiment": 1.0, "keyword_mentioned": "other", "message_length": 36}
+
+2025-02-20 14:25:26.585 | INFO     | __main__:main:158 - {'message': 'I just tried an app! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:25:26', 'category': 'other', 'sentiment': 0.04, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:25:26.585 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried an app! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:25:26', 'category': 'other', 'sentiment': 0.04, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:25:26.673 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried an app! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:25:26', 'category': 'other', 'sentiment': 0.04, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:25:26.675 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:25:26.675 | INFO     | __main__:process_message:143 - Updated author counts: {'tech': 1, 'other': 2}
+2025-02-20 14:25:26.770 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried an app! It was weird.", "author": "Charlie", "timestamp": "2025-02-20 14:25:26", "category": "other", "sentiment": 0.04, "keyword_mentioned": "other", "message_length": 34}
+
+2025-02-20 14:25:31.590 | INFO     | __main__:main:158 - {'message': 'I just tried recipe! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:25:31', 'category': 'food', 'sentiment': 0.05, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:25:31.590 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried recipe! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:25:31', 'category': 'food', 'sentiment': 0.05, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:25:31.794 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried recipe! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:25:31', 'category': 'food', 'sentiment': 0.05, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:25:31.794 | INFO     | __main__:process_message:137 - Message received for category: food
+2025-02-20 14:25:31.794 | INFO     | __main__:process_message:143 - Updated author counts: {'tech': 1, 'other': 2, 'food': 1}
+2025-02-20 14:25:31.897 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried recipe! It was boring.", "author": "Bob", "timestamp": "2025-02-20 14:25:31", "category": "food", "sentiment": 0.05, "keyword_mentioned": "recipe", "message_length": 35}
+
+2025-02-20 14:25:36.599 | INFO     | __main__:main:158 - {'message': 'I just saw a meme! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:36', 'category': 'humor', 'sentiment': 0.81, 'keyword_mentioned': 'meme', 'message_length': 32}
+2025-02-20 14:25:36.599 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a meme! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:36', 'category': 'humor', 'sentiment': 0.81, 'keyword_mentioned': 'meme', 'message_length': 32}
+2025-02-20 14:25:36.919 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw a meme! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:25:36', 'category': 'humor', 'sentiment': 0.81, 'keyword_mentioned': 'meme', 'message_length': 32}
+2025-02-20 14:25:36.920 | INFO     | __main__:process_message:137 - Message received for category: humor
+2025-02-20 14:25:36.921 | INFO     | __main__:process_message:143 - Updated author counts: {'tech': 1, 'other': 2, 'food': 1, 'humor': 1}
+2025-02-20 14:25:37.058 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw a meme! It was weird.", "author": "Eve", "timestamp": "2025-02-20 14:25:36", "category": "humor", "sentiment": 0.81, "keyword_mentioned": "meme", "message_length": 32}
+
+2025-02-20 14:25:41.604 | INFO     | __main__:main:158 - {'message': 'I just tried a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:25:41', 'category': 'other', 'sentiment': 0.11, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-20 14:25:41.605 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:25:41', 'category': 'other', 'sentiment': 0.11, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-20 14:28:30.332 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-20 14:28:30.332 | INFO     | __main__:main:138 - START producer...
+2025-02-20 14:28:30.466 | INFO     | __main__:main:151 - Kafka producer connected to localhost:9092
+2025-02-20 14:28:30.466 | INFO     | __main__:main:158 - {'message': 'I just saw a movie! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:28:30', 'category': 'entertainment', 'sentiment': 0.13, 'keyword_mentioned': 'movie', 'message_length': 33}
+2025-02-20 14:28:30.470 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a movie! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:28:30', 'category': 'entertainment', 'sentiment': 0.13, 'keyword_mentioned': 'movie', 'message_length': 33}
+2025-02-20 14:28:35.473 | INFO     | __main__:main:158 - {'message': 'I just saw travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:28:35', 'category': 'travel', 'sentiment': 0.36, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:28:35.476 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:28:35', 'category': 'travel', 'sentiment': 0.36, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:28:40.478 | INFO     | __main__:main:158 - {'message': 'I just shared a story! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:28:40', 'category': 'other', 'sentiment': 0.37, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:28:40.478 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a story! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:28:40', 'category': 'other', 'sentiment': 0.37, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:28:45.484 | INFO     | __main__:main:158 - {'message': 'I just found a story! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:28:45', 'category': 'other', 'sentiment': 0.63, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:28:45.487 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a story! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:28:45', 'category': 'other', 'sentiment': 0.63, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:28:50.489 | INFO     | __main__:main:158 - {'message': 'I just found a meme! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:28:50', 'category': 'humor', 'sentiment': 0.08, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-20 14:28:50.489 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a meme! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:28:50', 'category': 'humor', 'sentiment': 0.08, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-20 14:28:55.494 | INFO     | __main__:main:158 - {'message': 'I just shared a story! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:28:55', 'category': 'other', 'sentiment': 0.38, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:28:55.498 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a story! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:28:55', 'category': 'other', 'sentiment': 0.38, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:29:00.500 | INFO     | __main__:main:158 - {'message': 'I just shared travel! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-20 14:29:00', 'category': 'travel', 'sentiment': 0.93, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-02-20 14:29:00.503 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared travel! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-20 14:29:00', 'category': 'travel', 'sentiment': 0.93, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-02-20 14:29:05.505 | INFO     | __main__:main:158 - {'message': 'I just shared game! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:29:05', 'category': 'gaming', 'sentiment': 0.28, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-02-20 14:29:05.505 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared game! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:29:05', 'category': 'gaming', 'sentiment': 0.28, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-02-20 14:29:10.510 | INFO     | __main__:main:158 - {'message': 'I just loved a story! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:10', 'category': 'other', 'sentiment': 0.34, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:29:10.513 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a story! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:10', 'category': 'other', 'sentiment': 0.34, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:29:15.515 | INFO     | __main__:main:158 - {'message': 'I just saw travel! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:15', 'category': 'travel', 'sentiment': 0.41, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:29:15.517 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw travel! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:15', 'category': 'travel', 'sentiment': 0.41, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:29:20.520 | INFO     | __main__:main:158 - {'message': 'I just tried recipe! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:20', 'category': 'food', 'sentiment': 0.82, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:29:20.520 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried recipe! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:20', 'category': 'food', 'sentiment': 0.82, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:29:22.311 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-20 14:29:22.311 | INFO     | __main__:<module>:38 - Project root: C:\Users\A2645055\source\repos\44671\streamingData_Uma
+2025-02-20 14:29:22.311 | INFO     | __main__:<module>:39 - Data folder: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data
+2025-02-20 14:29:22.311 | INFO     | __main__:<module>:40 - Data file: C:\Users\A2645055\source\repos\44671\streamingData_Uma\data\project_live.json
+2025-02-20 14:29:22.649 | INFO     | __main__:main:171 - START consumer.
+2025-02-20 14:29:25.525 | INFO     | __main__:main:158 - {'message': 'I just loved a movie! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:25', 'category': 'entertainment', 'sentiment': 0.6, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:29:25.525 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a movie! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:25', 'category': 'entertainment', 'sentiment': 0.6, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:29:25.660 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just loved a movie! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:25', 'category': 'entertainment', 'sentiment': 0.6, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:29:25.660 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:29:25.660 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 1}
+2025-02-20 14:29:25.887 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just loved a movie! It was boring.", "author": "Bob", "timestamp": "2025-02-20 14:29:25", "category": "entertainment", "sentiment": 0.6, "keyword_mentioned": "movie", "message_length": 36}
+
+2025-02-20 14:29:30.529 | INFO     | __main__:main:158 - {'message': 'I just shared a trick! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:30', 'category': 'other', 'sentiment': 0.27, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:29:30.534 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a trick! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:30', 'category': 'other', 'sentiment': 0.27, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:29:30.898 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared a trick! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:30', 'category': 'other', 'sentiment': 0.27, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:29:30.899 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:29:30.899 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 1, 'other': 1}
+2025-02-20 14:29:30.997 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared a trick! It was funny.", "author": "Charlie", "timestamp": "2025-02-20 14:29:30", "category": "other", "sentiment": 0.27, "keyword_mentioned": "other", "message_length": 36}
+
+2025-02-20 14:29:35.535 | INFO     | __main__:main:158 - {'message': 'I just found JavaScript! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:35', 'category': 'tech', 'sentiment': 0.02, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:29:35.538 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found JavaScript! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:35', 'category': 'tech', 'sentiment': 0.02, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:29:36.012 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found JavaScript! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:35', 'category': 'tech', 'sentiment': 0.02, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:29:36.012 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:29:36.012 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 1, 'other': 1, 'tech': 1}
+2025-02-20 14:29:36.117 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found JavaScript! It was boring.", "author": "Alice", "timestamp": "2025-02-20 14:29:35", "category": "tech", "sentiment": 0.02, "keyword_mentioned": "JavaScript", "message_length": 39}
+
+2025-02-20 14:29:40.540 | INFO     | __main__:main:158 - {'message': 'I just tried a story! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:40', 'category': 'other', 'sentiment': 0.09, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:29:40.544 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a story! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:40', 'category': 'other', 'sentiment': 0.09, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:29:40.644 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried a story! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:40', 'category': 'other', 'sentiment': 0.09, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:29:40.644 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:29:40.644 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 1, 'other': 2, 'tech': 1}
+2025-02-20 14:29:40.730 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried a story! It was weird.", "author": "Alice", "timestamp": "2025-02-20 14:29:40", "category": "other", "sentiment": 0.09, "keyword_mentioned": "other", "message_length": 35}
+
+2025-02-20 14:29:45.546 | INFO     | __main__:main:158 - {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:45', 'category': 'other', 'sentiment': 0.08, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:29:45.549 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:45', 'category': 'other', 'sentiment': 0.08, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:29:45.744 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:29:45', 'category': 'other', 'sentiment': 0.08, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:29:45.744 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:29:45.744 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 1, 'other': 3, 'tech': 1}
+2025-02-20 14:29:46.019 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared an app! It was funny.", "author": "Bob", "timestamp": "2025-02-20 14:29:45", "category": "other", "sentiment": 0.08, "keyword_mentioned": "other", "message_length": 35}
+
+2025-02-20 14:29:50.551 | INFO     | __main__:main:158 - {'message': 'I just tried JavaScript! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:50', 'category': 'tech', 'sentiment': 0.23, 'keyword_mentioned': 'JavaScript', 'message_length': 38}
+2025-02-20 14:29:50.553 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried JavaScript! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:50', 'category': 'tech', 'sentiment': 0.23, 'keyword_mentioned': 'JavaScript', 'message_length': 38}
+2025-02-20 14:29:51.033 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried JavaScript! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-20 14:29:50', 'category': 'tech', 'sentiment': 0.23, 'keyword_mentioned': 'JavaScript', 'message_length': 38}
+2025-02-20 14:29:51.033 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:29:51.033 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 1, 'other': 3, 'tech': 2}
+2025-02-20 14:29:51.142 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried JavaScript! It was funny.", "author": "Alice", "timestamp": "2025-02-20 14:29:50", "category": "tech", "sentiment": 0.23, "keyword_mentioned": "JavaScript", "message_length": 38}
+
+2025-02-20 14:29:55.555 | INFO     | __main__:main:158 - {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:55', 'category': 'entertainment', 'sentiment': 0.46, 'keyword_mentioned': 'movie', 'message_length': 37}
+2025-02-20 14:29:55.558 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:55', 'category': 'entertainment', 'sentiment': 0.46, 'keyword_mentioned': 'movie', 'message_length': 37}
+2025-02-20 14:29:55.660 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:29:55', 'category': 'entertainment', 'sentiment': 0.46, 'keyword_mentioned': 'movie', 'message_length': 37}
+2025-02-20 14:29:55.660 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:29:55.660 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 3, 'tech': 2}
+2025-02-20 14:29:55.743 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared a movie! It was boring.", "author": "Charlie", "timestamp": "2025-02-20 14:29:55", "category": "entertainment", "sentiment": 0.46, "keyword_mentioned": "movie", "message_length": 37}
+
+2025-02-20 14:30:00.560 | INFO     | __main__:main:158 - {'message': 'I just shared recipe! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:00', 'category': 'food', 'sentiment': 0.38, 'keyword_mentioned': 'recipe', 'message_length': 36}
+2025-02-20 14:30:00.560 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared recipe! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:00', 'category': 'food', 'sentiment': 0.38, 'keyword_mentioned': 'recipe', 'message_length': 36}
+2025-02-20 14:30:00.756 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared recipe! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:00', 'category': 'food', 'sentiment': 0.38, 'keyword_mentioned': 'recipe', 'message_length': 36}
+2025-02-20 14:30:00.758 | INFO     | __main__:process_message:137 - Message received for category: food
+2025-02-20 14:30:00.758 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 3, 'tech': 2, 'food': 1}
+2025-02-20 14:30:00.838 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared recipe! It was boring.", "author": "Alice", "timestamp": "2025-02-20 14:30:00", "category": "food", "sentiment": 0.38, "keyword_mentioned": "recipe", "message_length": 36}
+
+2025-02-20 14:30:05.565 | INFO     | __main__:main:158 - {'message': 'I just found an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:05', 'category': 'other', 'sentiment': 0.78, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:05.568 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:05', 'category': 'other', 'sentiment': 0.78, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:05.883 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:05', 'category': 'other', 'sentiment': 0.78, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:05.884 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:30:05.885 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 4, 'tech': 2, 'food': 1}
+2025-02-20 14:30:05.991 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found an app! It was funny.", "author": "Bob", "timestamp": "2025-02-20 14:30:05", "category": "other", "sentiment": 0.78, "keyword_mentioned": "other", "message_length": 34}
+
+2025-02-20 14:30:10.570 | INFO     | __main__:main:158 - {'message': 'I just saw game! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:30:10', 'category': 'gaming', 'sentiment': 0.95, 'keyword_mentioned': 'game', 'message_length': 31}
+2025-02-20 14:30:10.572 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw game! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:30:10', 'category': 'gaming', 'sentiment': 0.95, 'keyword_mentioned': 'game', 'message_length': 31}
+2025-02-20 14:30:11.005 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw game! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:30:10', 'category': 'gaming', 'sentiment': 0.95, 'keyword_mentioned': 'game', 'message_length': 31}
+2025-02-20 14:30:11.005 | INFO     | __main__:process_message:137 - Message received for category: gaming
+2025-02-20 14:30:11.005 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 4, 'tech': 2, 'food': 1, 'gaming': 1}
+2025-02-20 14:30:11.089 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw game! It was boring.", "author": "Charlie", "timestamp": "2025-02-20 14:30:10", "category": "gaming", "sentiment": 0.95, "keyword_mentioned": "game", "message_length": 31}
+
+2025-02-20 14:30:15.574 | INFO     | __main__:main:158 - {'message': 'I just tried a story! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:15', 'category': 'other', 'sentiment': 0.49, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:30:15.574 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried a story! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:15', 'category': 'other', 'sentiment': 0.49, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:30:15.602 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried a story! It was boring.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:15', 'category': 'other', 'sentiment': 0.49, 'keyword_mentioned': 'other', 'message_length': 36}
+2025-02-20 14:30:15.602 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:30:15.602 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 5, 'tech': 2, 'food': 1, 'gaming': 1}
+2025-02-20 14:30:15.691 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried a story! It was boring.", "author": "Bob", "timestamp": "2025-02-20 14:30:15", "category": "other", "sentiment": 0.49, "keyword_mentioned": "other", "message_length": 36}
+
+2025-02-20 14:30:20.579 | INFO     | __main__:main:158 - {'message': 'I just found an app! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:30:20', 'category': 'other', 'sentiment': 0.05, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:20.582 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found an app! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:30:20', 'category': 'other', 'sentiment': 0.05, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:20.703 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found an app! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:30:20', 'category': 'other', 'sentiment': 0.05, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:20.704 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:30:20.705 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 6, 'tech': 2, 'food': 1, 'gaming': 1}
+2025-02-20 14:30:20.783 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found an app! It was weird.", "author": "Charlie", "timestamp": "2025-02-20 14:30:20", "category": "other", "sentiment": 0.05, "keyword_mentioned": "other", "message_length": 34}
+
+2025-02-20 14:30:25.583 | INFO     | __main__:main:158 - {'message': 'I just saw travel! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:25', 'category': 'travel', 'sentiment': 0.11, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:30:25.583 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw travel! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:25', 'category': 'travel', 'sentiment': 0.11, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:30:25.796 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw travel! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:25', 'category': 'travel', 'sentiment': 0.11, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:30:25.796 | INFO     | __main__:process_message:137 - Message received for category: travel
+2025-02-20 14:30:25.796 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 2, 'other': 6, 'tech': 2, 'food': 1, 'gaming': 1, 'travel': 1}
+2025-02-20 14:30:25.877 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw travel! It was weird.", "author": "Bob", "timestamp": "2025-02-20 14:30:25", "category": "travel", "sentiment": 0.11, "keyword_mentioned": "travel", "message_length": 32}
+
+2025-02-20 14:30:30.588 | INFO     | __main__:main:158 - {'message': 'I just found a movie! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:30', 'category': 'entertainment', 'sentiment': 0.46, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:30:30.588 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a movie! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:30', 'category': 'entertainment', 'sentiment': 0.46, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:30:30.890 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found a movie! It was weird.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:30', 'category': 'entertainment', 'sentiment': 0.46, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:30:30.891 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:30:30.892 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 6, 'tech': 2, 'food': 1, 'gaming': 1, 'travel': 1}
+2025-02-20 14:30:30.995 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found a movie! It was weird.", "author": "Alice", "timestamp": "2025-02-20 14:30:30", "category": "entertainment", "sentiment": 0.46, "keyword_mentioned": "movie", "message_length": 35}
+
+2025-02-20 14:30:35.593 | INFO     | __main__:main:158 - {'message': 'I just shared game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:35', 'category': 'gaming', 'sentiment': 0.66, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-20 14:30:35.593 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:35', 'category': 'gaming', 'sentiment': 0.66, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-20 14:30:36.008 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:35', 'category': 'gaming', 'sentiment': 0.66, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-20 14:30:36.008 | INFO     | __main__:process_message:137 - Message received for category: gaming
+2025-02-20 14:30:36.008 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 6, 'tech': 2, 'food': 1, 'gaming': 2, 'travel': 1}
+2025-02-20 14:30:36.107 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared game! It was funny.", "author": "Bob", "timestamp": "2025-02-20 14:30:35", "category": "gaming", "sentiment": 0.66, "keyword_mentioned": "game", "message_length": 33}
+
+2025-02-20 14:30:40.598 | INFO     | __main__:main:158 - {'message': 'I just shared recipe! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:30:40', 'category': 'food', 'sentiment': 0.66, 'keyword_mentioned': 'recipe', 'message_length': 37}
+2025-02-20 14:30:40.600 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared recipe! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:30:40', 'category': 'food', 'sentiment': 0.66, 'keyword_mentioned': 'recipe', 'message_length': 37}
+2025-02-20 14:30:40.630 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared recipe! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:30:40', 'category': 'food', 'sentiment': 0.66, 'keyword_mentioned': 'recipe', 'message_length': 37}
+2025-02-20 14:30:40.631 | INFO     | __main__:process_message:137 - Message received for category: food
+2025-02-20 14:30:40.632 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 6, 'tech': 2, 'food': 2, 'gaming': 2, 'travel': 1}
+2025-02-20 14:30:40.710 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared recipe! It was amazing.", "author": "Eve", "timestamp": "2025-02-20 14:30:40", "category": "food", "sentiment": 0.66, "keyword_mentioned": "recipe", "message_length": 37}
+
+2025-02-20 14:30:45.603 | INFO     | __main__:main:158 - {'message': 'I just tried an app! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:45', 'category': 'other', 'sentiment': 0.68, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:45.606 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried an app! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:45', 'category': 'other', 'sentiment': 0.68, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:45.724 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried an app! It was funny.', 'author': 'Alice', 'timestamp': '2025-02-20 14:30:45', 'category': 'other', 'sentiment': 0.68, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:30:45.725 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:30:45.725 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 7, 'tech': 2, 'food': 2, 'gaming': 2, 'travel': 1}
+2025-02-20 14:30:45.816 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried an app! It was funny.", "author": "Alice", "timestamp": "2025-02-20 14:30:45", "category": "other", "sentiment": 0.68, "keyword_mentioned": "other", "message_length": 34}
+
+2025-02-20 14:30:50.608 | INFO     | __main__:main:158 - {'message': 'I just saw a meme! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-20 14:30:50', 'category': 'humor', 'sentiment': 0.61, 'keyword_mentioned': 'meme', 'message_length': 33}
+2025-02-20 14:30:50.611 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a meme! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-20 14:30:50', 'category': 'humor', 'sentiment': 0.61, 'keyword_mentioned': 'meme', 'message_length': 33}
+2025-02-20 14:30:50.829 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw a meme! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-20 14:30:50', 'category': 'humor', 'sentiment': 0.61, 'keyword_mentioned': 'meme', 'message_length': 33}
+2025-02-20 14:30:50.830 | INFO     | __main__:process_message:137 - Message received for category: humor
+2025-02-20 14:30:50.831 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 7, 'tech': 2, 'food': 2, 'gaming': 2, 'travel': 1, 'humor': 1}
+2025-02-20 14:30:50.911 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw a meme! It was boring.", "author": "Eve", "timestamp": "2025-02-20 14:30:50", "category": "humor", "sentiment": 0.61, "keyword_mentioned": "meme", "message_length": 33}
+
+2025-02-20 14:30:55.613 | INFO     | __main__:main:158 - {'message': 'I just shared game! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:55', 'category': 'gaming', 'sentiment': 0.04, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-02-20 14:30:55.616 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared game! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:55', 'category': 'gaming', 'sentiment': 0.04, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-02-20 14:30:55.925 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared game! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:30:55', 'category': 'gaming', 'sentiment': 0.04, 'keyword_mentioned': 'game', 'message_length': 35}
+2025-02-20 14:30:55.926 | INFO     | __main__:process_message:137 - Message received for category: gaming
+2025-02-20 14:30:55.926 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 7, 'tech': 2, 'food': 2, 'gaming': 3, 'travel': 1, 'humor': 1}
+2025-02-20 14:30:56.023 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared game! It was amazing.", "author": "Bob", "timestamp": "2025-02-20 14:30:55", "category": "gaming", "sentiment": 0.04, "keyword_mentioned": "game", "message_length": 35}
+
+2025-02-20 14:31:00.618 | INFO     | __main__:main:158 - {'message': 'I just shared a trick! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:00', 'category': 'other', 'sentiment': 0.43, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:31:00.621 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a trick! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:00', 'category': 'other', 'sentiment': 0.43, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:31:01.038 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared a trick! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:00', 'category': 'other', 'sentiment': 0.43, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:31:01.039 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:31:01.039 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 3, 'other': 8, 'tech': 2, 'food': 2, 'gaming': 3, 'travel': 1, 'humor': 1}
+2025-02-20 14:31:01.125 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared a trick! It was amazing.", "author": "Charlie", "timestamp": "2025-02-20 14:31:00", "category": "other", "sentiment": 0.43, "keyword_mentioned": "other", "message_length": 38}
+
+2025-02-20 14:31:05.623 | INFO     | __main__:main:158 - {'message': 'I just loved a movie! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:05', 'category': 'entertainment', 'sentiment': 0.37, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:31:05.626 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a movie! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:05', 'category': 'entertainment', 'sentiment': 0.37, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:31:05.638 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just loved a movie! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:05', 'category': 'entertainment', 'sentiment': 0.37, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:31:05.639 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:31:05.640 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 4, 'other': 8, 'tech': 2, 'food': 2, 'gaming': 3, 'travel': 1, 'humor': 1}
+2025-02-20 14:31:05.759 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just loved a movie! It was weird.", "author": "Eve", "timestamp": "2025-02-20 14:31:05", "category": "entertainment", "sentiment": 0.37, "keyword_mentioned": "movie", "message_length": 35}
+
+2025-02-20 14:31:10.628 | INFO     | __main__:main:158 - {'message': 'I just saw travel! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:10', 'category': 'travel', 'sentiment': 0.29, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:31:10.631 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw travel! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:10', 'category': 'travel', 'sentiment': 0.29, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:31:10.772 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw travel! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:10', 'category': 'travel', 'sentiment': 0.29, 'keyword_mentioned': 'travel', 'message_length': 32}
+2025-02-20 14:31:10.773 | INFO     | __main__:process_message:137 - Message received for category: travel
+2025-02-20 14:31:10.774 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 4, 'other': 8, 'tech': 2, 'food': 2, 'gaming': 3, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:10.861 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw travel! It was funny.", "author": "Eve", "timestamp": "2025-02-20 14:31:10", "category": "travel", "sentiment": 0.29, "keyword_mentioned": "travel", "message_length": 32}
+
+2025-02-20 14:31:15.633 | INFO     | __main__:main:158 - {'message': 'I just found a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:15', 'category': 'entertainment', 'sentiment': 0.5, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:31:15.635 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:15', 'category': 'entertainment', 'sentiment': 0.5, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:31:15.885 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found a movie! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:15', 'category': 'entertainment', 'sentiment': 0.5, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:31:15.886 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:31:15.887 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 5, 'other': 8, 'tech': 2, 'food': 2, 'gaming': 3, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:15.977 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found a movie! It was boring.", "author": "Charlie", "timestamp": "2025-02-20 14:31:15", "category": "entertainment", "sentiment": 0.5, "keyword_mentioned": "movie", "message_length": 36}
+
+2025-02-20 14:31:20.637 | INFO     | __main__:main:158 - {'message': 'I just shared a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:31:20', 'category': 'other', 'sentiment': 0.77, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:31:20.641 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:31:20', 'category': 'other', 'sentiment': 0.77, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:31:20.991 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared a story! It was amazing.', 'author': 'Bob', 'timestamp': '2025-02-20 14:31:20', 'category': 'other', 'sentiment': 0.77, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-20 14:31:20.992 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:31:20.992 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 5, 'other': 9, 'tech': 2, 'food': 2, 'gaming': 3, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:21.065 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared a story! It was amazing.", "author": "Bob", "timestamp": "2025-02-20 14:31:20", "category": "other", "sentiment": 0.77, "keyword_mentioned": "other", "message_length": 38}
+
+2025-02-20 14:31:25.643 | INFO     | __main__:main:158 - {'message': 'I just shared Python! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:31:25', 'category': 'tech', 'sentiment': 0.41, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-20 14:31:25.646 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared Python! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:31:25', 'category': 'tech', 'sentiment': 0.41, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-20 14:31:26.079 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared Python! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:31:25', 'category': 'tech', 'sentiment': 0.41, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-20 14:31:26.080 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:31:26.080 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 5, 'other': 9, 'tech': 3, 'food': 2, 'gaming': 3, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:26.150 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared Python! It was boring.", "author": "Alice", "timestamp": "2025-02-20 14:31:25", "category": "tech", "sentiment": 0.41, "keyword_mentioned": "Python", "message_length": 36}
+
+2025-02-20 14:31:30.648 | INFO     | __main__:main:158 - {'message': 'I just saw a movie! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:31:30', 'category': 'entertainment', 'sentiment': 0.96, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:31:30.651 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a movie! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:31:30', 'category': 'entertainment', 'sentiment': 0.96, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:31:30.667 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw a movie! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:31:30', 'category': 'entertainment', 'sentiment': 0.96, 'keyword_mentioned': 'movie', 'message_length': 36}
+2025-02-20 14:31:30.668 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:31:30.668 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 6, 'other': 9, 'tech': 3, 'food': 2, 'gaming': 3, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:30.748 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw a movie! It was exciting.", "author": "Alice", "timestamp": "2025-02-20 14:31:30", "category": "entertainment", "sentiment": 0.96, "keyword_mentioned": "movie", "message_length": 36}
+
+2025-02-20 14:31:35.653 | INFO     | __main__:main:158 - {'message': 'I just shared game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:31:35', 'category': 'gaming', 'sentiment': 0.74, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-20 14:31:35.656 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:31:35', 'category': 'gaming', 'sentiment': 0.74, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-20 14:31:35.762 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared game! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:31:35', 'category': 'gaming', 'sentiment': 0.74, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-20 14:31:35.763 | INFO     | __main__:process_message:137 - Message received for category: gaming
+2025-02-20 14:31:35.764 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 6, 'other': 9, 'tech': 3, 'food': 2, 'gaming': 4, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:35.869 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared game! It was funny.", "author": "Bob", "timestamp": "2025-02-20 14:31:35", "category": "gaming", "sentiment": 0.74, "keyword_mentioned": "game", "message_length": 33}
+
+2025-02-20 14:31:40.658 | INFO     | __main__:main:158 - {'message': 'I just found a movie! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:40', 'category': 'entertainment', 'sentiment': 0.93, 'keyword_mentioned': 'movie', 'message_length': 37}
+2025-02-20 14:31:40.660 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a movie! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:40', 'category': 'entertainment', 'sentiment': 0.93, 'keyword_mentioned': 'movie', 'message_length': 37}
+2025-02-20 14:31:40.880 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found a movie! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:40', 'category': 'entertainment', 'sentiment': 0.93, 'keyword_mentioned': 'movie', 'message_length': 37}
+2025-02-20 14:31:40.881 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:31:40.882 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 9, 'tech': 3, 'food': 2, 'gaming': 4, 'travel': 2, 'humor': 1}
+2025-02-20 14:31:40.995 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found a movie! It was amazing.", "author": "Eve", "timestamp": "2025-02-20 14:31:40", "category": "entertainment", "sentiment": 0.93, "keyword_mentioned": "movie", "message_length": 37}
+
+2025-02-20 14:31:45.662 | INFO     | __main__:main:158 - {'message': 'I just shared travel! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:45', 'category': 'travel', 'sentiment': 0.3, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:31:45.665 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared travel! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:45', 'category': 'travel', 'sentiment': 0.3, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:31:46.006 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared travel! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:45', 'category': 'travel', 'sentiment': 0.3, 'keyword_mentioned': 'travel', 'message_length': 35}
+2025-02-20 14:31:46.007 | INFO     | __main__:process_message:137 - Message received for category: travel
+2025-02-20 14:31:46.008 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 9, 'tech': 3, 'food': 2, 'gaming': 4, 'travel': 3, 'humor': 1}
+2025-02-20 14:31:46.082 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared travel! It was funny.", "author": "Charlie", "timestamp": "2025-02-20 14:31:45", "category": "travel", "sentiment": 0.3, "keyword_mentioned": "travel", "message_length": 35}
+
+2025-02-20 14:31:50.667 | INFO     | __main__:main:158 - {'message': 'I just saw recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:50', 'category': 'food', 'sentiment': 0.21, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:31:50.672 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:50', 'category': 'food', 'sentiment': 0.21, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:31:51.096 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-20 14:31:50', 'category': 'food', 'sentiment': 0.21, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-20 14:31:51.097 | INFO     | __main__:process_message:137 - Message received for category: food
+2025-02-20 14:31:51.097 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 9, 'tech': 3, 'food': 3, 'gaming': 4, 'travel': 3, 'humor': 1}
+2025-02-20 14:31:51.172 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw recipe! It was exciting.", "author": "Eve", "timestamp": "2025-02-20 14:31:50", "category": "food", "sentiment": 0.21, "keyword_mentioned": "recipe", "message_length": 35}
+
+2025-02-20 14:31:55.673 | INFO     | __main__:main:158 - {'message': 'I just found Python! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:55', 'category': 'tech', 'sentiment': 0.72, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-20 14:31:55.676 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found Python! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:55', 'category': 'tech', 'sentiment': 0.72, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-20 14:31:55.688 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found Python! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:31:55', 'category': 'tech', 'sentiment': 0.72, 'keyword_mentioned': 'Python', 'message_length': 36}
+2025-02-20 14:31:55.689 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:31:55.690 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 9, 'tech': 4, 'food': 3, 'gaming': 4, 'travel': 3, 'humor': 1}
+2025-02-20 14:31:55.785 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found Python! It was amazing.", "author": "Charlie", "timestamp": "2025-02-20 14:31:55", "category": "tech", "sentiment": 0.72, "keyword_mentioned": "Python", "message_length": 36}
+
+2025-02-20 14:32:00.678 | INFO     | __main__:main:158 - {'message': 'I just loved game! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:00', 'category': 'gaming', 'sentiment': 0.69, 'keyword_mentioned': 'game', 'message_length': 34}
+2025-02-20 14:32:00.680 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved game! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:00', 'category': 'gaming', 'sentiment': 0.69, 'keyword_mentioned': 'game', 'message_length': 34}
+2025-02-20 14:32:00.813 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just loved game! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:00', 'category': 'gaming', 'sentiment': 0.69, 'keyword_mentioned': 'game', 'message_length': 34}
+2025-02-20 14:32:00.814 | INFO     | __main__:process_message:137 - Message received for category: gaming
+2025-02-20 14:32:00.815 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 9, 'tech': 4, 'food': 3, 'gaming': 5, 'travel': 3, 'humor': 1}
+2025-02-20 14:32:00.896 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just loved game! It was amazing.", "author": "Charlie", "timestamp": "2025-02-20 14:32:00", "category": "gaming", "sentiment": 0.69, "keyword_mentioned": "game", "message_length": 34}
+
+2025-02-20 14:32:05.682 | INFO     | __main__:main:158 - {'message': 'I just found a story! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:32:05', 'category': 'other', 'sentiment': 0.17, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:32:05.686 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found a story! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:32:05', 'category': 'other', 'sentiment': 0.17, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:32:05.912 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found a story! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:32:05', 'category': 'other', 'sentiment': 0.17, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:32:05.912 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:32:05.912 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 10, 'tech': 4, 'food': 3, 'gaming': 5, 'travel': 3, 'humor': 1}
+2025-02-20 14:32:05.990 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found a story! It was funny.", "author": "Bob", "timestamp": "2025-02-20 14:32:05", "category": "other", "sentiment": 0.17, "keyword_mentioned": "other", "message_length": 35}
+
+2025-02-20 14:32:10.688 | INFO     | __main__:main:158 - {'message': 'I just found JavaScript! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:10', 'category': 'tech', 'sentiment': 0.33, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:32:10.691 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found JavaScript! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:10', 'category': 'tech', 'sentiment': 0.33, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:32:11.010 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found JavaScript! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:10', 'category': 'tech', 'sentiment': 0.33, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:32:11.011 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:32:11.011 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 10, 'tech': 5, 'food': 3, 'gaming': 5, 'travel': 3, 'humor': 1}
+2025-02-20 14:32:11.094 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found JavaScript! It was boring.", "author": "Charlie", "timestamp": "2025-02-20 14:32:10", "category": "tech", "sentiment": 0.33, "keyword_mentioned": "JavaScript", "message_length": 39}
+
+2025-02-20 14:32:15.693 | INFO     | __main__:main:158 - {'message': 'I just saw a trick! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:15', 'category': 'other', 'sentiment': 0.65, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-20 14:32:15.697 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a trick! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:15', 'category': 'other', 'sentiment': 0.65, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-20 14:32:16.106 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw a trick! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:15', 'category': 'other', 'sentiment': 0.65, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-20 14:32:16.107 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:32:16.107 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 11, 'tech': 5, 'food': 3, 'gaming': 5, 'travel': 3, 'humor': 1}
+2025-02-20 14:32:16.190 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw a trick! It was weird.", "author": "Charlie", "timestamp": "2025-02-20 14:32:15", "category": "other", "sentiment": 0.65, "keyword_mentioned": "other", "message_length": 33}
+
+2025-02-20 14:32:20.698 | INFO     | __main__:main:158 - {'message': 'I just loved recipe! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:20', 'category': 'food', 'sentiment': 0.68, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-20 14:32:20.701 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved recipe! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:20', 'category': 'food', 'sentiment': 0.68, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-20 14:32:20.703 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just loved recipe! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:20', 'category': 'food', 'sentiment': 0.68, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-20 14:32:20.704 | INFO     | __main__:process_message:137 - Message received for category: food
+2025-02-20 14:32:20.704 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 11, 'tech': 5, 'food': 4, 'gaming': 5, 'travel': 3, 'humor': 1}
+2025-02-20 14:32:20.810 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just loved recipe! It was weird.", "author": "Charlie", "timestamp": "2025-02-20 14:32:20", "category": "food", "sentiment": 0.68, "keyword_mentioned": "recipe", "message_length": 34}
+
+2025-02-20 14:32:25.702 | INFO     | __main__:main:158 - {'message': 'I just found travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:25', 'category': 'travel', 'sentiment': 0.33, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-20 14:32:25.706 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:25', 'category': 'travel', 'sentiment': 0.33, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-20 14:32:25.822 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:25', 'category': 'travel', 'sentiment': 0.33, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-20 14:32:25.823 | INFO     | __main__:process_message:137 - Message received for category: travel
+2025-02-20 14:32:25.823 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 11, 'tech': 5, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:25.893 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found travel! It was exciting.", "author": "Charlie", "timestamp": "2025-02-20 14:32:25", "category": "travel", "sentiment": 0.33, "keyword_mentioned": "travel", "message_length": 37}
+
+2025-02-20 14:32:30.708 | INFO     | __main__:main:158 - {'message': 'I just shared JavaScript! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:32:30', 'category': 'tech', 'sentiment': 0.13, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:32:30.711 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared JavaScript! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:32:30', 'category': 'tech', 'sentiment': 0.13, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:32:30.912 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared JavaScript! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:32:30', 'category': 'tech', 'sentiment': 0.13, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-20 14:32:30.913 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:32:30.913 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 7, 'other': 11, 'tech': 6, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:30.994 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared JavaScript! It was funny.", "author": "Bob", "timestamp": "2025-02-20 14:32:30", "category": "tech", "sentiment": 0.13, "keyword_mentioned": "JavaScript", "message_length": 39}
+
+2025-02-20 14:32:35.713 | INFO     | __main__:main:158 - {'message': 'I just loved a movie! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:35', 'category': 'entertainment', 'sentiment': 0.84, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:32:35.716 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just loved a movie! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:35', 'category': 'entertainment', 'sentiment': 0.84, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:32:36.007 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just loved a movie! It was weird.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:32:35', 'category': 'entertainment', 'sentiment': 0.84, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-20 14:32:36.008 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:32:36.009 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 8, 'other': 11, 'tech': 6, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:36.109 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just loved a movie! It was weird.", "author": "Charlie", "timestamp": "2025-02-20 14:32:35", "category": "entertainment", "sentiment": 0.84, "keyword_mentioned": "movie", "message_length": 35}
+
+2025-02-20 14:32:40.717 | INFO     | __main__:main:158 - {'message': 'I just saw a trick! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-20 14:32:40', 'category': 'other', 'sentiment': 0.8, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-20 14:32:40.721 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just saw a trick! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-20 14:32:40', 'category': 'other', 'sentiment': 0.8, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-20 14:32:41.122 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just saw a trick! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-20 14:32:40', 'category': 'other', 'sentiment': 0.8, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-20 14:32:41.123 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:32:41.123 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 8, 'other': 12, 'tech': 6, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:41.216 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just saw a trick! It was funny.", "author": "Eve", "timestamp": "2025-02-20 14:32:40", "category": "other", "sentiment": 0.8, "keyword_mentioned": "other", "message_length": 33}
+
+2025-02-20 14:32:45.723 | INFO     | __main__:main:158 - {'message': 'I just tried an app! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:32:45', 'category': 'other', 'sentiment': 0.03, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:32:45.726 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried an app! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:32:45', 'category': 'other', 'sentiment': 0.03, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:32:45.727 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried an app! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-20 14:32:45', 'category': 'other', 'sentiment': 0.03, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-20 14:32:45.728 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:32:45.729 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 8, 'other': 13, 'tech': 6, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:45.815 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried an app! It was boring.", "author": "Alice", "timestamp": "2025-02-20 14:32:45", "category": "other", "sentiment": 0.03, "keyword_mentioned": "other", "message_length": 35}
+
+2025-02-20 14:32:50.728 | INFO     | __main__:main:158 - {'message': 'I just shared Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:32:50', 'category': 'tech', 'sentiment': 0.45, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-20 14:32:50.731 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:32:50', 'category': 'tech', 'sentiment': 0.45, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-20 14:32:50.829 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-20 14:32:50', 'category': 'tech', 'sentiment': 0.45, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-20 14:32:50.830 | INFO     | __main__:process_message:137 - Message received for category: tech
+2025-02-20 14:32:50.830 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 8, 'other': 13, 'tech': 7, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:50.934 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared Python! It was amazing.", "author": "Eve", "timestamp": "2025-02-20 14:32:50", "category": "tech", "sentiment": 0.45, "keyword_mentioned": "Python", "message_length": 37}
+
+2025-02-20 14:32:55.733 | INFO     | __main__:main:158 - {'message': 'I just shared a movie! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:32:55', 'category': 'entertainment', 'sentiment': 0.11, 'keyword_mentioned': 'movie', 'message_length': 39}
+2025-02-20 14:32:55.736 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a movie! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:32:55', 'category': 'entertainment', 'sentiment': 0.11, 'keyword_mentioned': 'movie', 'message_length': 39}
+2025-02-20 14:32:55.943 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just shared a movie! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-20 14:32:55', 'category': 'entertainment', 'sentiment': 0.11, 'keyword_mentioned': 'movie', 'message_length': 39}
+2025-02-20 14:32:55.944 | INFO     | __main__:process_message:137 - Message received for category: entertainment
+2025-02-20 14:32:55.945 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 9, 'other': 13, 'tech': 7, 'food': 4, 'gaming': 5, 'travel': 4, 'humor': 1}
+2025-02-20 14:32:56.035 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just shared a movie! It was exciting.", "author": "Alice", "timestamp": "2025-02-20 14:32:55", "category": "entertainment", "sentiment": 0.11, "keyword_mentioned": "movie", "message_length": 39}
+
+2025-02-20 14:33:00.738 | INFO     | __main__:main:158 - {'message': 'I just found travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:33:00', 'category': 'travel', 'sentiment': 0.19, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-20 14:33:00.741 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just found travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:33:00', 'category': 'travel', 'sentiment': 0.19, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-20 14:33:01.050 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just found travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:33:00', 'category': 'travel', 'sentiment': 0.19, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-20 14:33:01.052 | INFO     | __main__:process_message:137 - Message received for category: travel
+2025-02-20 14:33:01.052 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 9, 'other': 13, 'tech': 7, 'food': 4, 'gaming': 5, 'travel': 5, 'humor': 1}
+2025-02-20 14:33:01.142 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just found travel! It was exciting.", "author": "Charlie", "timestamp": "2025-02-20 14:33:00", "category": "travel", "sentiment": 0.19, "keyword_mentioned": "travel", "message_length": 37}
+
+2025-02-20 14:33:05.742 | INFO     | __main__:main:158 - {'message': 'I just tried an app! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:33:05', 'category': 'other', 'sentiment': 0.02, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:33:05.742 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just tried an app! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:33:05', 'category': 'other', 'sentiment': 0.02, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:33:06.155 | INFO     | __main__:process_message:131 - Processed JSON message: {'message': 'I just tried an app! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-20 14:33:05', 'category': 'other', 'sentiment': 0.02, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-20 14:33:06.155 | INFO     | __main__:process_message:137 - Message received for category: other
+2025-02-20 14:33:06.155 | INFO     | __main__:process_message:143 - Updated author counts: {'entertainment': 9, 'other': 14, 'tech': 7, 'food': 4, 'gaming': 5, 'travel': 5, 'humor': 1}
+2025-02-20 14:33:06.281 | INFO     | __main__:process_message:149 - Chart updated successfully for message: {"message": "I just tried an app! It was funny.", "author": "Charlie", "timestamp": "2025-02-20 14:33:05", "category": "other", "sentiment": 0.02, "keyword_mentioned": "other", "message_length": 34}
+
+2025-02-20 14:33:10.749 | INFO     | __main__:main:158 - {'message': 'I just shared a meme! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:33:10', 'category': 'humor', 'sentiment': 0.45, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-20 14:33:10.750 | INFO     | __main__:main:167 - Sent message to Kafka topic 'project_json': {'message': 'I just shared a meme! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-20 14:33:10', 'category': 'humor', 'sentiment': 0.45, 'keyword_mentioned': 'meme', 'message_length': 35}
