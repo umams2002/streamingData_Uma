@@ -7969,3 +7969,706 @@
 2025-02-21 19:40:04.863 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:40:04.849505', 'Food': 'Angelfood, commercial (25cm diam)', 'Calories': 73.0}
 2025-02-21 19:40:09.866 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:40:09.866398', 'Food': 'Angelfood, from mix (25cm diam)', 'Calories': 129.0}
 2025-02-21 19:40:14.870 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:40:14.869286', 'Food': 'Animal crackers (arrowroot, social tea)', 'Calories': 45.0}
+2025-02-21 19:57:29.471 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 19:57:29.471 | INFO     | __main__:<module>:66 - Project root: C:\Users\A2645055\source\repos\streamingData_Uma
+2025-02-21 19:57:29.471 | INFO     | __main__:<module>:70 - Data folder: C:\Users\A2645055\source\repos\streamingData_Uma\data
+2025-02-21 19:57:29.471 | INFO     | __main__:<module>:74 - Data file: C:\Users\A2645055\source\repos\streamingData_Uma\data\Food-Nutrients.csv
+2025-02-21 19:57:29.471 | INFO     | __main__:main:134 - START producer.
+2025-02-21 19:57:29.471 | INFO     | utils.utils_producer:get_zookeeper_address:57 - Zookeeper address: localhost:2181
+2025-02-21 19:57:29.518 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:79 - Zookeeper is ready at localhost:2181.
+2025-02-21 19:57:29.519 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 19:57:29.868 | INFO     | utils.utils_producer:check_kafka_service_is_ready:98 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 0, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': 'eHwf7guBTFKr4nChXUnGqA', 'controller_id': 0}
+2025-02-21 19:57:29.868 | INFO     | __main__:get_kafka_topic:48 - Kafka topic: food_csv
+2025-02-21 19:57:29.868 | INFO     | __main__:get_message_interval:55 - Message interval: 5 seconds
+2025-02-21 19:57:29.868 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 19:57:29.868 | INFO     | utils.utils_producer:create_kafka_producer:146 - Connecting to Kafka broker at localhost:9092...
+2025-02-21 19:57:30.000 | INFO     | utils.utils_producer:create_kafka_producer:151 - Kafka producer successfully created.
+2025-02-21 19:57:30.000 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 19:57:30.343 | INFO     | utils.utils_producer:create_kafka_topic:172 - Topic 'food_csv' already exists. Clearing it out...
+2025-02-21 19:57:30.343 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 19:57:30.682 | ERROR    | utils.utils_producer:clear_kafka_topic:235 - Error managing retention for topic 'food_csv': list indices must be integers or slices, not ConfigResource
+2025-02-21 19:57:30.684 | INFO     | __main__:main:157 - Kafka topic 'food_csv' is ready.
+2025-02-21 19:57:30.684 | INFO     | __main__:main:163 - Starting message production to topic 'food_csv'...
+2025-02-21 19:57:30.685 | INFO     | __main__:generate_messages:92 - Opening data file in read mode: C:\Users\A2645055\source\repos\streamingData_Uma\data\Food-Nutrients.csv
+2025-02-21 19:57:30.687 | INFO     | __main__:generate_messages:94 - Reading data from file: C:\Users\A2645055\source\repos\streamingData_Uma\data\Food-Nutrients.csv
+2025-02-21 19:57:30.689 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:57:30.688207', 'Food': 'Angelfood, commercial (25cm diam)', 'Calories': 73.0}
+2025-02-21 19:57:35.690 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:57:35.690753', 'Food': 'Angelfood, from mix (25cm diam)', 'Calories': 129.0}
+2025-02-21 19:57:40.692 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:57:40.692847', 'Food': 'Animal crackers (arrowroot, social tea)', 'Calories': 45.0}
+2025-02-21 19:57:45.695 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:57:45.695261', 'Food': 'Apple crisp, homemade', 'Calories': 206.0}
+2025-02-21 19:57:50.697 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:57:50.697555', 'Food': 'Apple, commercial, 2 crust (23cm diam)', 'Calories': 296.0}
+2025-02-21 19:57:54.389 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 19:57:55.101 | INFO     | __main__:main:244 - START consumer.
+2025-02-21 19:57:55.101 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 19:57:55.101 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 19:57:55.102 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 19:57:55.102 | INFO     | __main__:main:254 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 19:57:55.103 | INFO     | __main__:main:255 - Rolling window size: 10
+2025-02-21 19:57:55.104 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 19:57:55.104 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 19:57:55.232 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 19:57:55.232 | INFO     | __main__:main:262 - Polling messages from topic 'food_csv'...
+2025-02-21 19:57:55.646 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:40:04.849505', 'Food': 'Angelfood, commercial (25cm diam)', 'Calories': 73.0}
+2025-02-21 19:57:55.646 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:40:04.849505", "Food": "Angelfood, commercial (25cm diam)", "Calories": 73.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.646 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:40:09.866398', 'Food': 'Angelfood, from mix (25cm diam)', 'Calories': 129.0}
+2025-02-21 19:57:55.646 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:40:09.866398", "Food": "Angelfood, from mix (25cm diam)", "Calories": 129.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.657 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:40:14.869286', 'Food': 'Animal crackers (arrowroot, social tea)', 'Calories': 45.0}
+2025-02-21 19:57:55.658 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:40:14.869286", "Food": "Animal crackers (arrowroot, social tea)", "Calories": 45.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.661 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:57:30.688207', 'Food': 'Angelfood, commercial (25cm diam)', 'Calories': 73.0}
+2025-02-21 19:57:55.661 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:57:30.688207", "Food": "Angelfood, commercial (25cm diam)", "Calories": 73.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.661 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:57:35.690753', 'Food': 'Angelfood, from mix (25cm diam)', 'Calories': 129.0}
+2025-02-21 19:57:55.661 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:57:35.690753", "Food": "Angelfood, from mix (25cm diam)", "Calories": 129.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.668 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:57:40.692847', 'Food': 'Animal crackers (arrowroot, social tea)', 'Calories': 45.0}
+2025-02-21 19:57:55.669 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:57:40.692847", "Food": "Animal crackers (arrowroot, social tea)", "Calories": 45.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.672 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:57:45.695261', 'Food': 'Apple crisp, homemade', 'Calories': 206.0}
+2025-02-21 19:57:55.673 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:57:45.695261", "Food": "Apple crisp, homemade", "Calories": 206.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.676 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:57:50.697555', 'Food': 'Apple, commercial, 2 crust (23cm diam)', 'Calories': 296.0}
+2025-02-21 19:57:55.677 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:57:50.697555", "Food": "Apple, commercial, 2 crust (23cm diam)", "Calories": 296.0}': 'str' object has no attribute 'append'
+2025-02-21 19:57:55.701 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:57:55.699674', 'Food': 'Apple, homemade, 2 crust (23cm diam)', 'Calories': 411.0}
+2025-02-21 19:57:55.707 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:57:55.699674', 'Food': 'Apple, homemade, 2 crust (23cm diam)', 'Calories': 411.0}
+2025-02-21 19:57:55.707 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:57:55.699674", "Food": "Apple, homemade, 2 crust (23cm diam)", "Calories": 411.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:00.723 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:00.706729', 'Food': 'Banana bread, homemade (11cm X 6cm X 1cm)', 'Calories': 196.0}
+2025-02-21 19:58:00.729 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:00.706729', 'Food': 'Banana bread, homemade (11cm X 6cm X 1cm)', 'Calories': 196.0}
+2025-02-21 19:58:00.729 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:00.706729", "Food": "Banana bread, homemade (11cm X 6cm X 1cm)", "Calories": 196.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:05.732 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:05.732088', 'Food': 'Banana cream, from mix, no-bake type (23cm diam)', 'Calories': 231.0}
+2025-02-21 19:58:05.732 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:05.732088', 'Food': 'Banana cream, from mix, no-bake type (23cm diam)', 'Calories': 231.0}
+2025-02-21 19:58:05.732 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:05.732088", "Food": "Banana cream, from mix, no-bake type (23cm diam)", "Calories": 231.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:10.738 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:10.736618', 'Food': 'Biscuit, plain or buttermilk, fast food', 'Calories': 186.0}
+2025-02-21 19:58:10.745 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:10.736618', 'Food': 'Biscuit, plain or buttermilk, fast food', 'Calories': 186.0}
+2025-02-21 19:58:10.745 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:10.736618", "Food": "Biscuit, plain or buttermilk, fast food", "Calories": 186.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:15.741 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:15.740555', 'Food': 'Biscuit, plain or buttermilk, from mix, baked', 'Calories': 97.0}
+2025-02-21 19:58:15.746 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:15.740555', 'Food': 'Biscuit, plain or buttermilk, from mix, baked', 'Calories': 97.0}
+2025-02-21 19:58:15.746 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:15.740555", "Food": "Biscuit, plain or buttermilk, from mix, baked", "Calories": 97.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:20.746 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:20.744138', 'Food': 'Biscuit, plain or buttermilk, homemade', 'Calories': 212.0}
+2025-02-21 19:58:20.759 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:20.744138', 'Food': 'Biscuit, plain or buttermilk, homemade', 'Calories': 212.0}
+2025-02-21 19:58:20.760 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:20.744138", "Food": "Biscuit, plain or buttermilk, homemade", "Calories": 212.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:25.747 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:25.747935', 'Food': 'Biscuit, plain, refrigerated dough, baked', 'Calories': 93.0}
+2025-02-21 19:58:25.747 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:25.747935', 'Food': 'Biscuit, plain, refrigerated dough, baked', 'Calories': 93.0}
+2025-02-21 19:58:25.755 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:25.747935", "Food": "Biscuit, plain, refrigerated dough, baked", "Calories": 93.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:30.750 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:30.750902', 'Food': 'Boston cream pie, commercial', 'Calories': 232.0}
+2025-02-21 19:58:30.756 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:30.750902', 'Food': 'Boston cream pie, commercial', 'Calories': 232.0}
+2025-02-21 19:58:30.757 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:30.750902", "Food": "Boston cream pie, commercial", "Calories": 232.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:35.753 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:35.753302', 'Food': 'Bread pudding with raisins, homemade', 'Calories': 162.0}
+2025-02-21 19:58:35.753 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:35.753302', 'Food': 'Bread pudding with raisins, homemade', 'Calories': 162.0}
+2025-02-21 19:58:35.753 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:35.753302", "Food": "Bread pudding with raisins, homemade", "Calories": 162.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:40.757 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:40.757008', 'Food': 'Breakfast bar, Oatmeal to GoTM', 'Calories': 197.0}
+2025-02-21 19:58:40.757 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:40.757008', 'Food': 'Breakfast bar, Oatmeal to GoTM', 'Calories': 197.0}
+2025-02-21 19:58:40.757 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:40.757008", "Food": "Breakfast bar, Oatmeal to GoTM", "Calories": 197.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:45.759 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:45.759781', 'Food': 'Brownies, commercial (5cm X 5cm)', 'Calories': 138.0}
+2025-02-21 19:58:45.759 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:45.759781', 'Food': 'Brownies, commercial (5cm X 5cm)', 'Calories': 138.0}
+2025-02-21 19:58:45.766 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:45.759781", "Food": "Brownies, commercial (5cm X 5cm)", "Calories": 138.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:50.762 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:50.762342', 'Food': 'Brownies, homemade (5cm X 5cm)', 'Calories': 168.0}
+2025-02-21 19:58:50.762 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:50.762342', 'Food': 'Brownies, homemade (5cm X 5cm)', 'Calories': 168.0}
+2025-02-21 19:58:50.768 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:50.762342", "Food": "Brownies, homemade (5cm X 5cm)", "Calories": 168.0}': 'str' object has no attribute 'append'
+2025-02-21 19:58:55.765 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:58:55.765588', 'Food': 'Butter tart', 'Calories': 248.0}
+2025-02-21 19:58:55.770 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:58:55.765588', 'Food': 'Butter tart', 'Calories': 248.0}
+2025-02-21 19:58:55.771 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:58:55.765588", "Food": "Butter tart", "Calories": 248.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:00.768 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:00.768782', 'Food': 'Carrot, homemade with cream cheese icing (2 layer, 23cm diam)', 'Calories': 542.0}
+2025-02-21 19:59:00.768 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:00.768782', 'Food': 'Carrot, homemade with cream cheese icing (2 layer, 23cm diam)', 'Calories': 542.0}
+2025-02-21 19:59:00.775 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:00.768782", "Food": "Carrot, homemade with cream cheese icing (2 layer, 23cm diam)", "Calories": 542.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:05.772 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:05.772281', 'Food': 'Cereal bar, fruit filled (Nutri-GrainTM)', 'Calories': 135.0}
+2025-02-21 19:59:05.772 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:05.772281', 'Food': 'Cereal bar, fruit filled (Nutri-GrainTM)', 'Calories': 135.0}
+2025-02-21 19:59:05.772 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:05.772281", "Food": "Cereal bar, fruit filled (Nutri-GrainTM)", "Calories": 135.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:10.776 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:10.775461', 'Food': 'Cheesecake, commercial (15 cm diam)', 'Calories': 321.0}
+2025-02-21 19:59:10.776 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:10.775461', 'Food': 'Cheesecake, commercial (15 cm diam)', 'Calories': 321.0}
+2025-02-21 19:59:10.783 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:10.775461", "Food": "Cheesecake, commercial (15 cm diam)", "Calories": 321.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:15.778 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:15.778494', 'Food': 'Cheesecake, from mix, no-bake type (20cm diam)', 'Calories': 407.0}
+2025-02-21 19:59:15.778 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:15.778494', 'Food': 'Cheesecake, from mix, no-bake type (20cm diam)', 'Calories': 407.0}
+2025-02-21 19:59:15.778 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:15.778494", "Food": "Cheesecake, from mix, no-bake type (20cm diam)", "Calories": 407.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:20.782 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:20.781322', 'Food': 'Cheesecake, plain, homemade with cherry topping (20cm diam)', 'Calories': 459.0}
+2025-02-21 19:59:20.788 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:20.781322', 'Food': 'Cheesecake, plain, homemade with cherry topping (20cm diam)', 'Calories': 459.0}
+2025-02-21 19:59:20.791 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:20.781322", "Food": "Cheesecake, plain, homemade with cherry topping (20cm diam)", "Calories": 459.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:25.784 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:25.784420', 'Food': 'Cherry, commercial, 2 crust (23cm diam)', 'Calories': 325.0}
+2025-02-21 19:59:25.803 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:25.784420', 'Food': 'Cherry, commercial, 2 crust (23cm diam)', 'Calories': 325.0}
+2025-02-21 19:59:25.804 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:25.784420", "Food": "Cherry, commercial, 2 crust (23cm diam)", "Calories": 325.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:30.791 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:30.791466', 'Food': 'Chocolate chip, commercial', 'Calories': 98.0}
+2025-02-21 19:59:30.794 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:30.791466', 'Food': 'Chocolate chip, commercial', 'Calories': 98.0}
+2025-02-21 19:59:30.794 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:30.791466", "Food": "Chocolate chip, commercial", "Calories": 98.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:35.795 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:35.794496', 'Food': 'Chocolate chip, homemade', 'Calories': 156.0}
+2025-02-21 19:59:37.723 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:35.794496', 'Food': 'Chocolate chip, homemade', 'Calories': 156.0}
+2025-02-21 19:59:37.723 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:35.794496", "Food": "Chocolate chip, homemade", "Calories": 156.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:40.796 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:40.796967', 'Food': 'Chocolate chip, refrigerated dough, baked', 'Calories': 118.0}
+2025-02-21 19:59:40.796 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:40.796967', 'Food': 'Chocolate chip, refrigerated dough, baked', 'Calories': 118.0}
+2025-02-21 19:59:40.796 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:40.796967", "Food": "Chocolate chip, refrigerated dough, baked", "Calories": 118.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:45.800 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:45.800001', 'Food': 'Chocolate coated marshmallow', 'Calories': 129.0}
+2025-02-21 19:59:45.800 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:45.800001', 'Food': 'Chocolate coated marshmallow', 'Calories': 129.0}
+2025-02-21 19:59:45.800 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:45.800001", "Food": "Chocolate coated marshmallow", "Calories": 129.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:50.805 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:50.804340', 'Food': 'Chocolate cream, commercial (20cm diam)', 'Calories': 344.0}
+2025-02-21 19:59:55.806 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T01:59:55.806671', 'Food': 'Chocolate sandwich', 'Calories': 93.0}
+2025-02-21 19:59:56.928 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 19:59:57.477 | INFO     | __main__:main:244 - START consumer.
+2025-02-21 19:59:57.477 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 19:59:57.477 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 19:59:57.477 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 19:59:57.477 | INFO     | __main__:main:254 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 19:59:57.477 | INFO     | __main__:main:255 - Rolling window size: 10
+2025-02-21 19:59:57.477 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 19:59:57.477 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 19:59:57.623 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 19:59:57.628 | INFO     | __main__:main:262 - Polling messages from topic 'food_csv'...
+2025-02-21 19:59:57.861 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:45.800001', 'Food': 'Chocolate coated marshmallow', 'Calories': 129.0}
+2025-02-21 19:59:57.861 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:45.800001", "Food": "Chocolate coated marshmallow", "Calories": 129.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:57.861 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:50.804340', 'Food': 'Chocolate cream, commercial (20cm diam)', 'Calories': 344.0}
+2025-02-21 19:59:57.861 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:50.804340", "Food": "Chocolate cream, commercial (20cm diam)", "Calories": 344.0}': 'str' object has no attribute 'append'
+2025-02-21 19:59:57.871 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T01:59:55.806671', 'Food': 'Chocolate sandwich', 'Calories': 93.0}
+2025-02-21 19:59:57.872 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T01:59:55.806671", "Food": "Chocolate sandwich", "Calories": 93.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:00.808 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:00.808693', 'Food': 'Chocolate, from mix, with icing (23cm diam)', 'Calories': 362.0}
+2025-02-21 20:00:00.810 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:00.808693', 'Food': 'Chocolate, from mix, with icing (23cm diam)', 'Calories': 362.0}
+2025-02-21 20:00:00.819 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:00.808693", "Food": "Chocolate, from mix, with icing (23cm diam)", "Calories": 362.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:05.810 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:05.810831', 'Food': 'Chocolate, frozen, commercial, with chocolate icing (1 layer, 5cm X 20cm diam)', 'Calories': 282.0}
+2025-02-21 20:00:05.810 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:05.810831', 'Food': 'Chocolate, frozen, commercial, with chocolate icing (1 layer, 5cm X 20cm diam)', 'Calories': 282.0}
+2025-02-21 20:00:05.810 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:05.810831", "Food": "Chocolate, frozen, commercial, with chocolate icing (1 layer, 5cm X 20cm diam)", "Calories": 282.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:10.813 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:10.813643', 'Food': 'Chocolate, homemade, with icing (2 layer, 23cm diam)', 'Calories': 408.0}
+2025-02-21 20:00:10.813 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:10.813643', 'Food': 'Chocolate, homemade, with icing (2 layer, 23cm diam)', 'Calories': 408.0}
+2025-02-21 20:00:10.819 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:10.813643", "Food": "Chocolate, homemade, with icing (2 layer, 23cm diam)", "Calories": 408.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:15.817 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:15.815867', 'Food': 'Coconut cream, commercial (20cm diam)', 'Calories': 191.0}
+2025-02-21 20:00:15.825 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:15.815867', 'Food': 'Coconut cream, commercial (20cm diam)', 'Calories': 191.0}
+2025-02-21 20:00:15.825 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:15.815867", "Food": "Coconut cream, commercial (20cm diam)", "Calories": 191.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:20.818 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:20.818370', 'Food': 'Coconut macaroons, homemade', 'Calories': 194.0}
+2025-02-21 20:00:20.824 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:20.818370', 'Food': 'Coconut macaroons, homemade', 'Calories': 194.0}
+2025-02-21 20:00:20.824 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:20.818370", "Food": "Coconut macaroons, homemade", "Calories": 194.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:25.821 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:25.820823', 'Food': 'Coffee cake, cinnamon with crumb topping, commercial', 'Calories': 237.0}
+2025-02-21 20:00:28.968 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:00:29.444 | INFO     | __main__:main:244 - START consumer.
+2025-02-21 20:00:29.444 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:00:29.444 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:00:29.444 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:00:29.444 | INFO     | __main__:main:254 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:00:29.444 | INFO     | __main__:main:255 - Rolling window size: 10
+2025-02-21 20:00:29.444 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:00:29.444 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:00:29.580 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:00:29.581 | INFO     | __main__:main:262 - Polling messages from topic 'food_csv'...
+2025-02-21 20:00:29.709 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:20.818370', 'Food': 'Coconut macaroons, homemade', 'Calories': 194.0}
+2025-02-21 20:00:29.709 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:20.818370", "Food": "Coconut macaroons, homemade", "Calories": 194.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:29.709 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:25.820823', 'Food': 'Coffee cake, cinnamon with crumb topping, commercial', 'Calories': 237.0}
+2025-02-21 20:00:29.709 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:25.820823", "Food": "Coffee cake, cinnamon with crumb topping, commercial", "Calories": 237.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:30.823 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:30.823718', 'Food': 'Coffee cake, cinnamon with crumb topping, from mix (20cm X 15cm)', 'Calories': 142.0}
+2025-02-21 20:00:30.823 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:30.823718', 'Food': 'Coffee cake, cinnamon with crumb topping, from mix (20cm X 15cm)', 'Calories': 142.0}
+2025-02-21 20:00:30.823 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:30.823718", "Food": "Coffee cake, cinnamon with crumb topping, from mix (20cm X 15cm)", "Calories": 142.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:35.827 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:35.826193', 'Food': 'Croissant, butter', 'Calories': 231.0}
+2025-02-21 20:00:35.833 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:35.826193', 'Food': 'Croissant, butter', 'Calories': 231.0}
+2025-02-21 20:00:35.834 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:35.826193", "Food": "Croissant, butter", "Calories": 231.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:40.828 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:40.828988', 'Food': 'Danish pastry, cinnamon (11cm diam)', 'Calories': 262.0}
+2025-02-21 20:00:40.828 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:40.828988', 'Food': 'Danish pastry, cinnamon (11cm diam)', 'Calories': 262.0}
+2025-02-21 20:00:40.828 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:40.828988", "Food": "Danish pastry, cinnamon (11cm diam)", "Calories": 262.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:45.831 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:45.831352', 'Food': 'Danish pastry, fruit (11cm diam)', 'Calories': 263.0}
+2025-02-21 20:00:45.831 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:45.831352', 'Food': 'Danish pastry, fruit (11cm diam)', 'Calories': 263.0}
+2025-02-21 20:00:45.831 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:45.831352", "Food": "Danish pastry, fruit (11cm diam)", "Calories": 263.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:50.834 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:50.834124', 'Food': 'Date squares, homemade', 'Calories': 226.0}
+2025-02-21 20:00:50.839 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:50.834124', 'Food': 'Date squares, homemade', 'Calories': 226.0}
+2025-02-21 20:00:50.840 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:50.834124", "Food": "Date squares, homemade", "Calories": 226.0}': 'str' object has no attribute 'append'
+2025-02-21 20:00:55.837 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:00:55.836377', 'Food': 'Doughnut, cake-type, plain (8cm diam)', 'Calories': 198.0}
+2025-02-21 20:00:55.841 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:00:55.836377', 'Food': 'Doughnut, cake-type, plain (8cm diam)', 'Calories': 198.0}
+2025-02-21 20:00:55.842 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:00:55.836377", "Food": "Doughnut, cake-type, plain (8cm diam)", "Calories": 198.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:00.840 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:00.839077', 'Food': 'Doughnut, cake-type, plain, chocolate coated (9cm diam)', 'Calories': 270.0}
+2025-02-21 20:01:00.846 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:00.839077', 'Food': 'Doughnut, cake-type, plain, chocolate coated (9cm diam)', 'Calories': 270.0}
+2025-02-21 20:01:00.846 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:00.839077", "Food": "Doughnut, cake-type, plain, chocolate coated (9cm diam)", "Calories": 270.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:05.841 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:05.841064', 'Food': 'Doughnut, yeast-leavened, honey bun, glazed (9cm x 6cm)', 'Calories': 242.0}
+2025-02-21 20:01:05.841 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:05.841064', 'Food': 'Doughnut, yeast-leavened, honey bun, glazed (9cm x 6cm)', 'Calories': 242.0}
+2025-02-21 20:01:05.841 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:05.841064", "Food": "Doughnut, yeast-leavened, honey bun, glazed (9cm x 6cm)", "Calories": 242.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:10.843 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:10.843331', 'Food': 'Doughnut, yeast-leavened, jelly filled (9cm X 6cm)', 'Calories': 289.0}
+2025-02-21 20:01:10.843 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:10.843331', 'Food': 'Doughnut, yeast-leavened, jelly filled (9cm X 6cm)', 'Calories': 289.0}
+2025-02-21 20:01:10.849 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:10.843331", "Food": "Doughnut, yeast-leavened, jelly filled (9cm X 6cm)", "Calories": 289.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:15.846 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:15.846481', 'Food': 'Eclairs, custard filled, chocolate glaze', 'Calories': 262.0}
+2025-02-21 20:01:15.846 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:15.846481', 'Food': 'Eclairs, custard filled, chocolate glaze', 'Calories': 262.0}
+2025-02-21 20:01:15.846 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:15.846481", "Food": "Eclairs, custard filled, chocolate glaze", "Calories": 262.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:20.850 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:20.849266', 'Food': 'Fig', 'Calories': 111.0}
+2025-02-21 20:01:20.854 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:20.849266', 'Food': 'Fig', 'Calories': 111.0}
+2025-02-21 20:01:20.854 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:20.849266", "Food": "Fig", "Calories": 111.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:25.851 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:25.851384', 'Food': 'Fried pie, fruit (13cm X 10cm)', 'Calories': 404.0}
+2025-02-21 20:01:25.858 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:25.851384', 'Food': 'Fried pie, fruit (13cm X 10cm)', 'Calories': 404.0}
+2025-02-21 20:01:25.858 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:25.851384", "Food": "Fried pie, fruit (13cm X 10cm)", "Calories": 404.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:30.870 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:30.854713', 'Food': 'Fruitcake, commercial', 'Calories': 139.0}
+2025-02-21 20:01:35.874 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:35.873098', 'Food': 'Ginger snaps', 'Calories': 58.0}
+2025-02-21 20:01:39.410 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:01:39.847 | INFO     | __main__:main:244 - START consumer.
+2025-02-21 20:01:39.847 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:01:39.847 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:01:39.847 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:01:39.847 | INFO     | __main__:main:254 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:01:39.847 | INFO     | __main__:main:255 - Rolling window size: 10
+2025-02-21 20:01:39.847 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:01:39.847 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:01:39.991 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:01:39.991 | INFO     | __main__:main:262 - Polling messages from topic 'food_csv'...
+2025-02-21 20:01:40.115 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:30.854713', 'Food': 'Fruitcake, commercial', 'Calories': 139.0}
+2025-02-21 20:01:40.115 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:30.854713", "Food": "Fruitcake, commercial", "Calories": 139.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:40.115 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:35.873098', 'Food': 'Ginger snaps', 'Calories': 58.0}
+2025-02-21 20:01:40.115 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:35.873098", "Food": "Ginger snaps", "Calories": 58.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:40.876 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:40.875634', 'Food': 'Gingerbread, from mix (23cm X 23cm)', 'Calories': 212.0}
+2025-02-21 20:01:40.880 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:40.875634', 'Food': 'Gingerbread, from mix (23cm X 23cm)', 'Calories': 212.0}
+2025-02-21 20:01:40.883 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:40.875634", "Food": "Gingerbread, from mix (23cm X 23cm)", "Calories": 212.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:45.879 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:45.877953', 'Food': 'Graham crackers, plain or honey', 'Calories': 59.0}
+2025-02-21 20:01:46.119 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:45.877953', 'Food': 'Graham crackers, plain or honey', 'Calories': 59.0}
+2025-02-21 20:01:46.119 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:45.877953", "Food": "Graham crackers, plain or honey", "Calories": 59.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:50.881 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:50.880984', 'Food': 'Granola bar, hard, chocolate chip', 'Calories': 105.0}
+2025-02-21 20:01:50.886 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:50.880984', 'Food': 'Granola bar, hard, chocolate chip', 'Calories': 105.0}
+2025-02-21 20:01:50.887 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:50.880984", "Food": "Granola bar, hard, chocolate chip", "Calories": 105.0}': 'str' object has no attribute 'append'
+2025-02-21 20:01:55.883 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:01:55.883343', 'Food': 'Granola bar, hard, plain', 'Calories': 118.0}
+2025-02-21 20:01:55.883 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:01:55.883343', 'Food': 'Granola bar, hard, plain', 'Calories': 118.0}
+2025-02-21 20:01:55.883 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:01:55.883343", "Food": "Granola bar, hard, plain", "Calories": 118.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:00.885 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:00.885985', 'Food': 'Granola bar, soft, chocolate chip, graham and marshmallow', 'Calories': 109.0}
+2025-02-21 20:02:00.885 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:00.885985', 'Food': 'Granola bar, soft, chocolate chip, graham and marshmallow', 'Calories': 109.0}
+2025-02-21 20:02:00.885 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:00.885985", "Food": "Granola bar, soft, chocolate chip, graham and marshmallow", "Calories": 109.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:05.888 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:05.888574', 'Food': 'Granola bar, soft, nuts and raisins', 'Calories': 127.0}
+2025-02-21 20:02:05.888 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:05.888574', 'Food': 'Granola bar, soft, nuts and raisins', 'Calories': 127.0}
+2025-02-21 20:02:05.888 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:05.888574", "Food": "Granola bar, soft, nuts and raisins", "Calories": 127.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:10.892 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:10.890916', 'Food': 'Granola bar, soft, peanut butter, chocolate coated', 'Calories': 188.0}
+2025-02-21 20:02:10.894 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:10.890916', 'Food': 'Granola bar, soft, peanut butter, chocolate coated', 'Calories': 188.0}
+2025-02-21 20:02:10.896 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:10.890916", "Food": "Granola bar, soft, peanut butter, chocolate coated", "Calories": 188.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:15.893 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:15.893285', 'Food': 'Granola bar, soft, plain', 'Calories': 124.0}
+2025-02-21 20:02:15.893 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:15.893285', 'Food': 'Granola bar, soft, plain', 'Calories': 124.0}
+2025-02-21 20:02:15.893 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:15.893285", "Food": "Granola bar, soft, plain", "Calories": 124.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:20.896 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:20.895235', 'Food': 'Lemon meringue, commercial (20cm diam)', 'Calories': 303.0}
+2025-02-21 20:02:20.896 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:20.895235', 'Food': 'Lemon meringue, commercial (20cm diam)', 'Calories': 303.0}
+2025-02-21 20:02:20.896 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:20.895235", "Food": "Lemon meringue, commercial (20cm diam)", "Calories": 303.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:25.901 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:25.901610', 'Food': 'Mincemeat pie, homemade, 2 crust (23cm diam)', 'Calories': 477.0}
+2025-02-21 20:02:25.901 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:25.901610', 'Food': 'Mincemeat pie, homemade, 2 crust (23cm diam)', 'Calories': 477.0}
+2025-02-21 20:02:25.901 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:25.901610", "Food": "Mincemeat pie, homemade, 2 crust (23cm diam)", "Calories": 477.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:30.903 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:30.903758', 'Food': 'Molasses', 'Calories': 129.0}
+2025-02-21 20:02:30.910 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:30.903758', 'Food': 'Molasses', 'Calories': 129.0}
+2025-02-21 20:02:30.911 | ERROR    | __main__:process_message:228 - Error processing message '{"timestamp": "2025-02-22T02:02:30.903758", "Food": "Molasses", "Calories": 129.0}': 'str' object has no attribute 'append'
+2025-02-21 20:02:32.919 | WARNING  | __main__:main:269 - Consumer interrupted by user.
+2025-02-21 20:02:32.943 | INFO     | __main__:main:274 - Kafka consumer for topic 'food_csv' closed.
+2025-02-21 20:02:35.905 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:35.905787', 'Food': 'Muffin bar (Hop&GoTM, Sweet MorningsTM)', 'Calories': 178.0}
+2025-02-21 20:02:40.908 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:40.907421', 'Food': 'Muffin, bran, homemade', 'Calories': 199.0}
+2025-02-21 20:02:45.910 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:45.909233', 'Food': 'Muffin, carrot, commercial', 'Calories': 344.0}
+2025-02-21 20:02:50.911 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:50.911448', 'Food': 'Muffin, chocolate chip, commercial', 'Calories': 366.0}
+2025-02-21 20:02:55.914 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:02:55.914283', 'Food': 'Muffin, fruit, commercial', 'Calories': 313.0}
+2025-02-21 20:02:56.987 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:02:57.376 | INFO     | __main__:main:244 - START consumer.
+2025-02-21 20:02:57.376 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:02:57.376 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:02:57.376 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:02:57.376 | INFO     | __main__:main:254 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:02:57.376 | INFO     | __main__:main:255 - Rolling window size: 10
+2025-02-21 20:02:57.376 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:02:57.376 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:02:57.512 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:02:57.513 | INFO     | __main__:main:262 - Polling messages from topic 'food_csv'...
+2025-02-21 20:02:57.832 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:35.905787', 'Food': 'Muffin bar (Hop&GoTM, Sweet MorningsTM)', 'Calories': 178.0}
+2025-02-21 20:02:58.251 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:40.907421', 'Food': 'Muffin, bran, homemade', 'Calories': 199.0}
+2025-02-21 20:02:58.440 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:45.909233', 'Food': 'Muffin, carrot, commercial', 'Calories': 344.0}
+2025-02-21 20:02:58.623 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:50.911448', 'Food': 'Muffin, chocolate chip, commercial', 'Calories': 366.0}
+2025-02-21 20:02:58.790 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:02:55.914283', 'Food': 'Muffin, fruit, commercial', 'Calories': 313.0}
+2025-02-21 20:03:00.916 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:00.916138', 'Food': 'Muffin, fruit, homemade', 'Calories': 162.0}
+2025-02-21 20:03:00.916 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:00.916138', 'Food': 'Muffin, fruit, homemade', 'Calories': 162.0}
+2025-02-21 20:03:05.917 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:05.917887', 'Food': 'Oatmeal, with raisins, commercial', 'Calories': 117.0}
+2025-02-21 20:03:05.917 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:05.917887', 'Food': 'Oatmeal, with raisins, commercial', 'Calories': 117.0}
+2025-02-21 20:03:10.920 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:10.920070', 'Food': 'Oatmeal, without raisins, homemade', 'Calories': 134.0}
+2025-02-21 20:03:10.920 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:10.920070', 'Food': 'Oatmeal, without raisins, homemade', 'Calories': 134.0}
+2025-02-21 20:03:15.923 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:15.923081', 'Food': 'Peanut butter sandwich', 'Calories': 134.0}
+2025-02-21 20:03:15.923 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:15.923081', 'Food': 'Peanut butter sandwich', 'Calories': 134.0}
+2025-02-21 20:03:20.925 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:20.925166', 'Food': 'Peanut butter, homemade', 'Calories': 190.0}
+2025-02-21 20:03:20.929 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:20.925166', 'Food': 'Peanut butter, homemade', 'Calories': 190.0}
+2025-02-21 20:03:25.927 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:25.927164', 'Food': 'Pecan, commercial (20cm diam)', 'Calories': 452.0}
+2025-02-21 20:03:25.929 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:25.927164', 'Food': 'Pecan, commercial (20cm diam)', 'Calories': 452.0}
+2025-02-21 20:03:30.930 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:30.929165', 'Food': 'Pound cake, homemade  (23cm X 13cm X 7.5cm)', 'Calories': 391.0}
+2025-02-21 20:03:30.930 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:30.929165', 'Food': 'Pound cake, homemade  (23cm X 13cm X 7.5cm)', 'Calories': 391.0}
+2025-02-21 20:03:35.931 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:35.931609', 'Food': 'Pumpkin, commercial (20cm diam)', 'Calories': 229.0}
+2025-02-21 20:03:35.931 | INFO     | __main__:process_message:205 - Processed JSON message: {'timestamp': '2025-02-22T02:03:35.931609', 'Food': 'Pumpkin, commercial (20cm diam)', 'Calories': 229.0}
+2025-02-21 20:03:40.934 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:40.933396', 'Food': 'Rice Krispies SquaresTM, commercial', 'Calories': 91.0}
+2025-02-21 20:03:45.935 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:45.935934', 'Food': 'Shortbread, commercial, plain', 'Calories': 80.0}
+2025-02-21 20:03:50.938 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:50.938016', 'Food': 'Shortbread, homemade', 'Calories': 185.0}
+2025-02-21 20:03:55.940 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:03:55.940397', 'Food': 'Shortcake, biscuit-type, homemade (4cm X 7.5cm diam)', 'Calories': 234.0}
+2025-02-21 20:04:00.942 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:00.942918', 'Food': 'Sponge, commercial, individual shell', 'Calories': 72.0}
+2025-02-21 20:04:05.945 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:05.944840', 'Food': 'Sponge, homemade (25cm diam)', 'Calories': 187.0}
+2025-02-21 20:04:10.947 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:10.947236', 'Food': 'Sugar cookies, commercial', 'Calories': 143.0}
+2025-02-21 20:04:15.949 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:15.949158', 'Food': 'Sugar cookies, homemade', 'Calories': 142.0}
+2025-02-21 20:04:20.951 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:20.951558', 'Food': 'Sugar pie, homemade, 1 crust', 'Calories': 407.0}
+2025-02-21 20:04:25.954 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:25.953427', 'Food': 'Toaster pastries (Pop-TartsTM), brown sugar & cinnamon', 'Calories': 206.0}
+2025-02-21 20:04:30.956 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:30.955724', 'Food': 'Toaster pastries (Pop-TartsTM), fruit, frosted', 'Calories': 215.0}
+2025-02-21 20:04:35.958 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:35.958065', 'Food': 'Vanilla wafers', 'Calories': 57.0}
+2025-02-21 20:04:40.961 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:40.961342', 'Food': 'White, from mix, with icing (2 layer, 23cm diam)', 'Calories': 363.0}
+2025-02-21 20:04:45.963 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:45.963455', 'Food': 'White, frozen, commercial, with icing (1 layer, 5cm X 20cm diam)', 'Calories': 283.0}
+2025-02-21 20:04:50.965 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:50.965639', 'Food': 'White, homemade, with icing (2 layer, 23cm diam)', 'Calories': 371.0}
+2025-02-21 20:04:53.992 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:04:54.409 | INFO     | __main__:main:251 - START consumer.
+2025-02-21 20:04:54.409 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:04:54.409 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:04:54.409 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:04:54.409 | INFO     | __main__:main:261 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:04:54.409 | INFO     | __main__:main:262 - Rolling window size: 10
+2025-02-21 20:04:54.409 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:04:54.409 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:04:54.549 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:04:54.549 | INFO     | __main__:main:269 - Polling messages from topic 'food_csv'...
+2025-02-21 20:04:54.882 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:03:35.931609', 'Food': 'Pumpkin, commercial (20cm diam)', 'Calories': 229.0}
+2025-02-21 20:04:55.244 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:03:40.933396', 'Food': 'Rice Krispies SquaresTM, commercial', 'Calories': 91.0}
+2025-02-21 20:04:55.377 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:03:45.935934', 'Food': 'Shortbread, commercial, plain', 'Calories': 80.0}
+2025-02-21 20:04:55.559 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:03:50.938016', 'Food': 'Shortbread, homemade', 'Calories': 185.0}
+2025-02-21 20:04:55.726 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:03:55.940397', 'Food': 'Shortcake, biscuit-type, homemade (4cm X 7.5cm diam)', 'Calories': 234.0}
+2025-02-21 20:04:55.878 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:00.942918', 'Food': 'Sponge, commercial, individual shell', 'Calories': 72.0}
+2025-02-21 20:04:55.967 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:04:55.967538', 'Food': 'Yellow, from mix, with icing (2 layer, 23cm diam)', 'Calories': 363.0}
+2025-02-21 20:04:56.060 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:05.944840', 'Food': 'Sponge, homemade (25cm diam)', 'Calories': 187.0}
+2025-02-21 20:04:56.211 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:10.947236', 'Food': 'Sugar cookies, commercial', 'Calories': 143.0}
+2025-02-21 20:04:56.330 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:15.949158', 'Food': 'Sugar cookies, homemade', 'Calories': 142.0}
+2025-02-21 20:04:56.431 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:20.951558', 'Food': 'Sugar pie, homemade, 1 crust', 'Calories': 407.0}
+2025-02-21 20:04:56.545 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:25.953427', 'Food': 'Toaster pastries (Pop-TartsTM), brown sugar & cinnamon', 'Calories': 206.0}
+2025-02-21 20:04:56.663 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:30.955724', 'Food': 'Toaster pastries (Pop-TartsTM), fruit, frosted', 'Calories': 215.0}
+2025-02-21 20:04:56.780 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:35.958065', 'Food': 'Vanilla wafers', 'Calories': 57.0}
+2025-02-21 20:04:56.923 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:40.961342', 'Food': 'White, from mix, with icing (2 layer, 23cm diam)', 'Calories': 363.0}
+2025-02-21 20:04:57.027 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:45.963455', 'Food': 'White, frozen, commercial, with icing (1 layer, 5cm X 20cm diam)', 'Calories': 283.0}
+2025-02-21 20:04:57.130 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:50.965639', 'Food': 'White, homemade, with icing (2 layer, 23cm diam)', 'Calories': 371.0}
+2025-02-21 20:04:57.230 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:04:55.967538', 'Food': 'Yellow, from mix, with icing (2 layer, 23cm diam)', 'Calories': 363.0}
+2025-02-21 20:05:00.970 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:00.970359', 'Food': 'Beer, de-alcoholized, (Labbat .5TM)', 'Calories': 210.0}
+2025-02-21 20:05:00.972 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:00.970359', 'Food': 'Beer, de-alcoholized, (Labbat .5TM)', 'Calories': 210.0}
+2025-02-21 20:05:05.974 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:05.973260', 'Food': 'Beer, high alcohol (7%alcohol by volume)', 'Calories': 183.0}
+2025-02-21 20:05:05.977 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:05.973260', 'Food': 'Beer, high alcohol (7%alcohol by volume)', 'Calories': 183.0}
+2025-02-21 20:05:10.977 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:10.976238', 'Food': 'Beer, light (4% alcohol by volume)', 'Calories': 99.0}
+2025-02-21 20:05:10.977 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:10.976238', 'Food': 'Beer, light (4% alcohol by volume)', 'Calories': 99.0}
+2025-02-21 20:05:15.979 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:15.979121', 'Food': 'Beer, regular (5% alcohol by volume)', 'Calories': 140.0}
+2025-02-21 20:05:15.981 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:15.979121', 'Food': 'Beer, regular (5% alcohol by volume)', 'Calories': 140.0}
+2025-02-21 20:05:20.981 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:20.981178', 'Food': 'Chai, latte', 'Calories': 149.0}
+2025-02-21 20:05:20.986 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:20.981178', 'Food': 'Chai, latte', 'Calories': 149.0}
+2025-02-21 20:05:25.984 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:25.983103', 'Food': 'Citrus juice drink, frozen, diluted (Five AliveTM)', 'Calories': 131.0}
+2025-02-21 20:05:25.987 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:25.983103', 'Food': 'Citrus juice drink, frozen, diluted (Five AliveTM)', 'Calories': 131.0}
+2025-02-21 20:05:30.985 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:30.985148', 'Food': 'Club soda', 'Calories': 0.0}
+2025-02-21 20:05:30.985 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:30.985148', 'Food': 'Club soda', 'Calories': 0.0}
+2025-02-21 20:05:35.987 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:35.987462', 'Food': 'Cocktail, daiquiri', 'Calories': 237.0}
+2025-02-21 20:05:35.991 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:35.987462', 'Food': 'Cocktail, daiquiri', 'Calories': 237.0}
+2025-02-21 20:05:40.989 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:40.989411', 'Food': 'Cocktail, margarita', 'Calories': 246.0}
+2025-02-21 20:05:40.989 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:40.989411', 'Food': 'Cocktail, margarita', 'Calories': 246.0}
+2025-02-21 20:05:45.992 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:45.991457', 'Food': 'Coffee, brewed', 'Calories': 3.0}
+2025-02-21 20:05:45.992 | INFO     | __main__:process_message:212 - Processed JSON message: {'timestamp': '2025-02-22T02:05:45.991457', 'Food': 'Coffee, brewed', 'Calories': 3.0}
+2025-02-21 20:05:50.994 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:50.993464', 'Food': 'Coffee, brewed, decaffeinated', 'Calories': 3.0}
+2025-02-21 20:05:55.998 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:05:55.997359', 'Food': 'Coffee, instant, regular, powder + water', 'Calories': 5.0}
+2025-02-21 20:06:01.000 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:00.999747', 'Food': 'Coffee, latte', 'Calories': 101.0}
+2025-02-21 20:06:06.003 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:06.002591', 'Food': 'Coffee, substitute, powder + water', 'Calories': 13.0}
+2025-02-21 20:06:11.004 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:11.004914', 'Food': 'Cola', 'Calories': 110.0}
+2025-02-21 20:06:16.007 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:16.007681', 'Food': 'Cola, aspartame sweetened', 'Calories': 3.0}
+2025-02-21 20:06:21.009 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:21.009691', 'Food': 'Cola, decaffeinated', 'Calories': 107.0}
+2025-02-21 20:06:26.013 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:26.012066', 'Food': 'Fruit flavour drink, low Calorie, powder + water (Crystal LightTM)', 'Calories': 3.0}
+2025-02-21 20:06:31.017 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:31.014074', 'Food': 'Fruit punch flavour drink, powder (Kool-AidTM) + water', 'Calories': 102.0}
+2025-02-21 20:06:36.019 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:36.018456', 'Food': 'Fruit punch flavour drink, vitamin C added, powder + water', 'Calories': 102.0}
+2025-02-21 20:06:41.022 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:41.022249', 'Food': 'Fruit punch juice drink, ready-to-drink (Sunny DTM)', 'Calories': 123.0}
+2025-02-21 20:06:46.024 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:46.024443', 'Food': 'Ginger ale', 'Calories': 88.0}
+2025-02-21 20:06:51.026 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:51.026820', 'Food': 'Iced cappuccino - original - with cream (Tim HortonsTM)', 'Calories': 211.0}
+2025-02-21 20:06:56.029 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:06:56.029264', 'Food': 'Iced cappuccino - with 2% milk (Tim HortonsTM)', 'Calories': 127.0}
+2025-02-21 20:07:01.031 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:01.031449', 'Food': 'Iced coffee, Frappuccino (StarbucksTM)', 'Calories': 127.0}
+2025-02-21 20:07:06.034 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:06.033827', 'Food': 'Iced tea, lemon flavor, ready-to-drink', 'Calories': 91.0}
+2025-02-21 20:07:11.035 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:11.035519', 'Food': 'Iced tea, lemon flavour, powder + water', 'Calories': 93.0}
+2025-02-21 20:07:16.039 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:16.038313', 'Food': 'Lemonade, pink or white, frozen, diluted', 'Calories': 105.0}
+2025-02-21 20:07:21.107 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:21.076662', 'Food': 'Lemon-lime soda', 'Calories': 104.0}
+2025-02-21 20:07:26.127 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:26.127191', 'Food': 'Liqueur, coffee and cream', 'Calories': 172.0}
+2025-02-21 20:07:31.130 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:31.130091', 'Food': 'Mixed vegetable and fruit juice drink, ready-to-drink (V8 SplashTM)', 'Calories': 113.0}
+2025-02-21 20:07:36.132 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:36.132550', 'Food': 'Non cola soda, aspartame sweetened', 'Calories': 0.0}
+2025-02-21 20:07:41.134 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:41.134394', 'Food': 'Orange drink, vitamin C added (Hi-CTM), ready-to-drink', 'Calories': 134.0}
+2025-02-21 20:07:46.137 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:46.137006', 'Food': 'Orange drink, vitamin C added (TangTM, QuenchTM, Riseâ€™n ShineTM), powder + water', 'Calories': 135.0}
+2025-02-21 20:07:51.140 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:51.139177', 'Food': 'Orange soda', 'Calories': 126.0}
+2025-02-21 20:07:56.141 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:07:56.141540', 'Food': 'Sangria', 'Calories': 87.0}
+2025-02-21 20:08:01.143 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:01.143736', 'Food': 'Spirits (gin, rum, vodka, whisky)', 'Calories': 109.0}
+2025-02-21 20:08:06.146 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:06.145587', 'Food': 'Sports drink, fruit flavour, low Calorie, ready-to-drink (GatoradeTM, PoweradeTM)', 'Calories': 29.0}
+2025-02-21 20:08:11.148 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:11.148545', 'Food': 'Sports drink, fruit flavour, ready-to-drink (GatoradeTM, PoweradeTM)', 'Calories': 67.0}
+2025-02-21 20:08:16.150 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:16.150652', 'Food': 'Tea, brewed', 'Calories': 3.0}
+2025-02-21 20:08:21.152 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:21.152640', 'Food': 'Tea, brewed, herbal', 'Calories': 3.0}
+2025-02-21 20:08:26.155 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:26.155091', 'Food': 'Tonic water', 'Calories': 124.0}
+2025-02-21 20:08:31.157 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:31.157575', 'Food': 'Vodka cooler', 'Calories': 220.0}
+2025-02-21 20:08:36.159 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:36.159989', 'Food': 'Water, mineral (PerrierTM)', 'Calories': 0.0}
+2025-02-21 20:08:41.162 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:41.162245', 'Food': 'Water, municipal', 'Calories': 0.0}
+2025-02-21 20:08:46.164 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:46.164024', 'Food': 'Wine, dessert, sweet', 'Calories': 203.0}
+2025-02-21 20:08:51.166 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:51.166184', 'Food': 'Wine, table, red', 'Calories': 90.0}
+2025-02-21 20:08:56.169 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:08:56.168539', 'Food': 'Wine, table, white', 'Calories': 85.0}
+2025-02-21 20:09:01.171 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:01.171566', 'Food': 'Buttermilk', 'Calories': 104.0}
+2025-02-21 20:09:06.174 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:06.174125', 'Food': 'Cheese, Blue', 'Calories': 177.0}
+2025-02-21 20:09:11.177 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:11.176591', 'Food': 'Cheese, Brick', 'Calories': 186.0}
+2025-02-21 20:09:16.179 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:16.179223', 'Food': 'Cheese, Brie', 'Calories': 167.0}
+2025-02-21 20:09:21.182 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:21.182352', 'Food': 'Cheese, Camembert', 'Calories': 150.0}
+2025-02-21 20:09:26.184 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:26.184929', 'Food': 'Cheese, Cheddar', 'Calories': 202.0}
+2025-02-21 20:09:31.187 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:31.187758', 'Food': 'Cheese, Cheddar, low fat (18% M.F.)', 'Calories': 141.0}
+2025-02-21 20:09:36.189 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:36.189876', 'Food': 'Cheese, Cottage cheese (1% M.F.)', 'Calories': 86.0}
+2025-02-21 20:09:41.191 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:41.191724', 'Food': 'Cheese, Cream cheese, light', 'Calories': 70.0}
+2025-02-21 20:09:46.193 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:46.193530', 'Food': 'Cheese, Cream cheese, regular', 'Calories': 103.0}
+2025-02-21 20:09:51.195 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:51.195992', 'Food': 'Cheese, Edam', 'Calories': 179.0}
+2025-02-21 20:09:56.198 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:09:56.198290', 'Food': 'Cheese, Feta', 'Calories': 132.0}
+2025-02-21 20:10:01.200 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:01.200268', 'Food': 'Cheese, Goat cheese, soft', 'Calories': 134.0}
+2025-02-21 20:10:06.206 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:06.205407', 'Food': 'Cheese, Gouda', 'Calories': 178.0}
+2025-02-21 20:10:11.207 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:11.207760', 'Food': 'Cheese, Gruyere', 'Calories': 207.0}
+2025-02-21 20:10:16.210 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:16.210277', 'Food': 'Cheese, Imitation cheese', 'Calories': 120.0}
+2025-02-21 20:10:21.212 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:21.212589', 'Food': 'Cheese, Mozzarella (22.5% M.F.)', 'Calories': 141.0}
+2025-02-21 20:10:26.215 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:26.214723', 'Food': 'Cheese, Mozzarella, partially skimmed (16.5% M.F.)', 'Calories': 127.0}
+2025-02-21 20:10:31.217 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:31.217793', 'Food': 'Cheese, Parmesan, grated', 'Calories': 27.0}
+2025-02-21 20:10:36.219 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:36.219947', 'Food': 'Cheese, Processed cheese food, thin slices', 'Calories': 78.0}
+2025-02-21 20:10:41.222 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:41.222017', 'Food': 'Cheese, Processed cheese food, thin slices, light', 'Calories': 50.0}
+2025-02-21 20:10:46.225 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:46.225796', 'Food': 'Cheese, Processed cheese spread (Cheez WhizTM)', 'Calories': 90.0}
+2025-02-21 20:10:51.230 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:51.230190', 'Food': 'Cheese, Processed cheese spread, light (Light Cheez WhizTM)', 'Calories': 69.0}
+2025-02-21 20:10:56.232 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:10:56.232209', 'Food': 'Cheese, Ricotta cheese, partly skimmed milk', 'Calories': 181.0}
+2025-02-21 20:11:01.234 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:01.234817', 'Food': 'Cheese, Romano, grated', 'Calories': 25.0}
+2025-02-21 20:11:06.237 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:06.237163', 'Food': 'Cheese, Swiss (Emmental)', 'Calories': 190.0}
+2025-02-21 20:11:11.240 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:11.239401', 'Food': 'Cheese, Swiss, processed, thin slices', 'Calories': 70.0}
+2025-02-21 20:11:16.241 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:16.241435', 'Food': 'Chocolate milk, chocolate flavour powder + 2% milk', 'Calories': 207.0}
+2025-02-21 20:11:21.244 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:21.243794', 'Food': 'Chocolate milk, syrup + 2% milk', 'Calories': 238.0}
+2025-02-21 20:11:26.245 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:26.245753', 'Food': 'Coffee whitener, frozen liquid', 'Calories': 21.0}
+2025-02-21 20:11:31.248 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:31.248240', 'Food': 'Coffee whitener, powdered', 'Calories': 11.0}
+2025-02-21 20:11:36.250 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:36.250336', 'Food': 'Coffee whitener, powdered, light', 'Calories': 9.0}
+2025-02-21 20:11:41.252 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:41.252756', 'Food': 'Cream, Half and half, 10% M.F.', 'Calories': 18.0}
+2025-02-21 20:11:46.256 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:46.255208', 'Food': 'Cream, Whipped, pressurized', 'Calories': 39.0}
+2025-02-21 20:11:51.257 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:51.257519', 'Food': 'Dessert topping, frozen', 'Calories': 60.0}
+2025-02-21 20:11:56.261 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:11:56.260478', 'Food': 'Dessert topping, frozen, low fat', 'Calories': 42.0}
+2025-02-21 20:12:01.262 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:01.262539', 'Food': 'Dessert topping, powdered, prepared with 2% milk', 'Calories': 37.0}
+2025-02-21 20:12:06.265 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:06.264614', 'Food': 'Dessert topping, pressurized', 'Calories': 47.0}
+2025-02-21 20:12:11.267 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:11.267036', 'Food': 'Drinkable yogourt', 'Calories': 145.0}
+2025-02-21 20:12:16.270 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:16.269262', 'Food': 'Eggnog', 'Calories': 362.0}
+2025-02-21 20:12:21.271 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:21.271312', 'Food': 'Fresh cheese (DanimalTM, MinigoTM)', 'Calories': 68.0}
+2025-02-21 20:12:26.273 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:26.273870', 'Food': 'Hot chocolate, aspartame sweetened, powder + water', 'Calories': 78.0}
+2025-02-21 20:12:31.275 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:31.275845', 'Food': 'Hot chocolate, homemade with cocoa + 2% milk', 'Calories': 203.0}
+2025-02-21 20:12:36.278 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:36.278149', 'Food': 'Hot chocolate, powder + 2% milk', 'Calories': 255.0}
+2025-02-21 20:12:41.281 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:41.281207', 'Food': 'Hot chocolate, powder + water', 'Calories': 160.0}
+2025-02-21 20:12:46.283 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:46.283836', 'Food': 'Instant breakfast powder + 2% milk', 'Calories': 260.0}
+2025-02-21 20:12:51.287 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:51.286038', 'Food': 'Kefir, plain', 'Calories': 104.0}
+2025-02-21 20:12:56.288 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:12:56.288171', 'Food': 'Milk shake, chocolate', 'Calories': 296.0}
+2025-02-21 20:13:01.291 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:01.290396', 'Food': 'Milk shake, vanilla', 'Calories': 279.0}
+2025-02-21 20:13:06.293 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:06.293227', 'Food': 'Milk, chocolate, 1% M.F.', 'Calories': 166.0}
+2025-02-21 20:13:11.295 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:11.295287', 'Food': 'Milk, chocolate, 2% M.F.', 'Calories': 190.0}
+2025-02-21 20:13:16.297 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:16.297466', 'Food': 'Milk, condensed, sweetened, canned (Eagle BrandTM)', 'Calories': 62.0}
+2025-02-21 20:13:21.299 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:21.299682', 'Food': 'Milk, evaporated, partly skimmed, canned, diluted, 2% M.F.', 'Calories': 122.0}
+2025-02-21 20:13:26.301 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:26.301637', 'Food': 'Milk, evaporated, partly skimmed, canned, undiluted, 2% M.F.', 'Calories': 15.0}
+2025-02-21 20:13:31.304 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:31.304118', 'Food': 'Milk, evaporated, skim, canned, diluted, 0.2% M.F.', 'Calories': 105.0}
+2025-02-21 20:13:36.306 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:36.306356', 'Food': 'Milk, evaporated, skim, canned, undiluted, 0.2% M.F.', 'Calories': 13.0}
+2025-02-21 20:13:41.308 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:41.308336', 'Food': 'Milk, evaporated, whole, canned, diluted, 7.8% M.F.', 'Calories': 178.0}
+2025-02-21 20:13:46.311 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:46.310415', 'Food': 'Milk, evaporated, whole, canned, undiluted, 7.8% M.F.', 'Calories': 21.0}
+2025-02-21 20:13:51.317 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:51.316826', 'Food': 'Milk, partly skimmed, 1% M.F.', 'Calories': 108.0}
+2025-02-21 20:13:56.322 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:13:56.322377', 'Food': 'Milk, partly skimmed, 2% M.F.', 'Calories': 129.0}
+2025-02-21 20:14:01.211 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:14:01.324 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:01.324728', 'Food': 'Milk, partly skimmed, 2% M.F., with added milk solids', 'Calories': 146.0}
+2025-02-21 20:14:01.593 | INFO     | __main__:main:188 - START consumer.
+2025-02-21 20:14:01.593 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:14:01.593 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:14:01.593 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:14:01.593 | INFO     | __main__:main:198 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:14:01.593 | INFO     | __main__:main:199 - Rolling window size: 10
+2025-02-21 20:14:01.593 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:14:01.593 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:14:01.735 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:14:01.735 | INFO     | __main__:main:206 - Polling messages from topic 'food_csv'...
+2025-02-21 20:14:01.940 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:05:45.991457', 'Food': 'Coffee, brewed', 'Calories': 3.0}
+2025-02-21 20:14:01.997 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:05:50.993464', 'Food': 'Coffee, brewed, decaffeinated', 'Calories': 3.0}
+2025-02-21 20:14:02.046 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:05:55.997359', 'Food': 'Coffee, instant, regular, powder + water', 'Calories': 5.0}
+2025-02-21 20:14:02.099 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:00.999747', 'Food': 'Coffee, latte', 'Calories': 101.0}
+2025-02-21 20:14:02.136 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:06.002591', 'Food': 'Coffee, substitute, powder + water', 'Calories': 13.0}
+2025-02-21 20:14:02.184 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:11.004914', 'Food': 'Cola', 'Calories': 110.0}
+2025-02-21 20:14:02.230 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:16.007681', 'Food': 'Cola, aspartame sweetened', 'Calories': 3.0}
+2025-02-21 20:14:02.280 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:21.009691', 'Food': 'Cola, decaffeinated', 'Calories': 107.0}
+2025-02-21 20:14:02.322 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:26.012066', 'Food': 'Fruit flavour drink, low Calorie, powder + water (Crystal LightTM)', 'Calories': 3.0}
+2025-02-21 20:14:02.373 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:31.014074', 'Food': 'Fruit punch flavour drink, powder (Kool-AidTM) + water', 'Calories': 102.0}
+2025-02-21 20:14:02.421 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:36.018456', 'Food': 'Fruit punch flavour drink, vitamin C added, powder + water', 'Calories': 102.0}
+2025-02-21 20:14:02.464 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:41.022249', 'Food': 'Fruit punch juice drink, ready-to-drink (Sunny DTM)', 'Calories': 123.0}
+2025-02-21 20:14:02.518 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:46.024443', 'Food': 'Ginger ale', 'Calories': 88.0}
+2025-02-21 20:14:02.565 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:51.026820', 'Food': 'Iced cappuccino - original - with cream (Tim HortonsTM)', 'Calories': 211.0}
+2025-02-21 20:14:02.611 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:06:56.029264', 'Food': 'Iced cappuccino - with 2% milk (Tim HortonsTM)', 'Calories': 127.0}
+2025-02-21 20:14:02.651 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:01.031449', 'Food': 'Iced coffee, Frappuccino (StarbucksTM)', 'Calories': 127.0}
+2025-02-21 20:14:02.688 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:06.033827', 'Food': 'Iced tea, lemon flavor, ready-to-drink', 'Calories': 91.0}
+2025-02-21 20:14:02.733 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:11.035519', 'Food': 'Iced tea, lemon flavour, powder + water', 'Calories': 93.0}
+2025-02-21 20:14:02.783 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:16.038313', 'Food': 'Lemonade, pink or white, frozen, diluted', 'Calories': 105.0}
+2025-02-21 20:14:02.831 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:21.076662', 'Food': 'Lemon-lime soda', 'Calories': 104.0}
+2025-02-21 20:14:02.880 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:26.127191', 'Food': 'Liqueur, coffee and cream', 'Calories': 172.0}
+2025-02-21 20:14:02.928 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:31.130091', 'Food': 'Mixed vegetable and fruit juice drink, ready-to-drink (V8 SplashTM)', 'Calories': 113.0}
+2025-02-21 20:14:02.969 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:36.132550', 'Food': 'Non cola soda, aspartame sweetened', 'Calories': 0.0}
+2025-02-21 20:14:03.028 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:41.134394', 'Food': 'Orange drink, vitamin C added (Hi-CTM), ready-to-drink', 'Calories': 134.0}
+2025-02-21 20:14:03.078 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:46.137006', 'Food': 'Orange drink, vitamin C added (TangTM, QuenchTM, Riseâ€™n ShineTM), powder + water', 'Calories': 135.0}
+2025-02-21 20:14:03.132 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:51.139177', 'Food': 'Orange soda', 'Calories': 126.0}
+2025-02-21 20:14:03.181 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:07:56.141540', 'Food': 'Sangria', 'Calories': 87.0}
+2025-02-21 20:14:03.235 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:01.143736', 'Food': 'Spirits (gin, rum, vodka, whisky)', 'Calories': 109.0}
+2025-02-21 20:14:03.281 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:06.145587', 'Food': 'Sports drink, fruit flavour, low Calorie, ready-to-drink (GatoradeTM, PoweradeTM)', 'Calories': 29.0}
+2025-02-21 20:14:03.339 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:11.148545', 'Food': 'Sports drink, fruit flavour, ready-to-drink (GatoradeTM, PoweradeTM)', 'Calories': 67.0}
+2025-02-21 20:14:03.381 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:16.150652', 'Food': 'Tea, brewed', 'Calories': 3.0}
+2025-02-21 20:14:03.445 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:21.152640', 'Food': 'Tea, brewed, herbal', 'Calories': 3.0}
+2025-02-21 20:14:03.499 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:26.155091', 'Food': 'Tonic water', 'Calories': 124.0}
+2025-02-21 20:14:03.580 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:31.157575', 'Food': 'Vodka cooler', 'Calories': 220.0}
+2025-02-21 20:14:03.630 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:36.159989', 'Food': 'Water, mineral (PerrierTM)', 'Calories': 0.0}
+2025-02-21 20:14:03.667 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:41.162245', 'Food': 'Water, municipal', 'Calories': 0.0}
+2025-02-21 20:14:03.714 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:46.164024', 'Food': 'Wine, dessert, sweet', 'Calories': 203.0}
+2025-02-21 20:14:03.773 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:51.166184', 'Food': 'Wine, table, red', 'Calories': 90.0}
+2025-02-21 20:14:03.822 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:08:56.168539', 'Food': 'Wine, table, white', 'Calories': 85.0}
+2025-02-21 20:14:03.881 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:01.171566', 'Food': 'Buttermilk', 'Calories': 104.0}
+2025-02-21 20:14:03.929 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:06.174125', 'Food': 'Cheese, Blue', 'Calories': 177.0}
+2025-02-21 20:14:03.981 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:11.176591', 'Food': 'Cheese, Brick', 'Calories': 186.0}
+2025-02-21 20:14:04.033 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:16.179223', 'Food': 'Cheese, Brie', 'Calories': 167.0}
+2025-02-21 20:14:04.085 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:21.182352', 'Food': 'Cheese, Camembert', 'Calories': 150.0}
+2025-02-21 20:14:04.135 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:26.184929', 'Food': 'Cheese, Cheddar', 'Calories': 202.0}
+2025-02-21 20:14:04.181 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:31.187758', 'Food': 'Cheese, Cheddar, low fat (18% M.F.)', 'Calories': 141.0}
+2025-02-21 20:14:04.234 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:36.189876', 'Food': 'Cheese, Cottage cheese (1% M.F.)', 'Calories': 86.0}
+2025-02-21 20:14:04.282 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:41.191724', 'Food': 'Cheese, Cream cheese, light', 'Calories': 70.0}
+2025-02-21 20:14:04.332 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:46.193530', 'Food': 'Cheese, Cream cheese, regular', 'Calories': 103.0}
+2025-02-21 20:14:04.382 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:51.195992', 'Food': 'Cheese, Edam', 'Calories': 179.0}
+2025-02-21 20:14:04.435 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:09:56.198290', 'Food': 'Cheese, Feta', 'Calories': 132.0}
+2025-02-21 20:14:04.484 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:01.200268', 'Food': 'Cheese, Goat cheese, soft', 'Calories': 134.0}
+2025-02-21 20:14:04.534 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:06.205407', 'Food': 'Cheese, Gouda', 'Calories': 178.0}
+2025-02-21 20:14:04.567 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:11.207760', 'Food': 'Cheese, Gruyere', 'Calories': 207.0}
+2025-02-21 20:14:04.599 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:16.210277', 'Food': 'Cheese, Imitation cheese', 'Calories': 120.0}
+2025-02-21 20:14:04.637 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:21.212589', 'Food': 'Cheese, Mozzarella (22.5% M.F.)', 'Calories': 141.0}
+2025-02-21 20:14:04.673 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:26.214723', 'Food': 'Cheese, Mozzarella, partially skimmed (16.5% M.F.)', 'Calories': 127.0}
+2025-02-21 20:14:04.706 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:31.217793', 'Food': 'Cheese, Parmesan, grated', 'Calories': 27.0}
+2025-02-21 20:14:04.734 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:36.219947', 'Food': 'Cheese, Processed cheese food, thin slices', 'Calories': 78.0}
+2025-02-21 20:14:04.771 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:41.222017', 'Food': 'Cheese, Processed cheese food, thin slices, light', 'Calories': 50.0}
+2025-02-21 20:14:04.803 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:46.225796', 'Food': 'Cheese, Processed cheese spread (Cheez WhizTM)', 'Calories': 90.0}
+2025-02-21 20:14:04.832 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:51.230190', 'Food': 'Cheese, Processed cheese spread, light (Light Cheez WhizTM)', 'Calories': 69.0}
+2025-02-21 20:14:04.862 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:10:56.232209', 'Food': 'Cheese, Ricotta cheese, partly skimmed milk', 'Calories': 181.0}
+2025-02-21 20:14:04.890 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:01.234817', 'Food': 'Cheese, Romano, grated', 'Calories': 25.0}
+2025-02-21 20:14:04.923 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:06.237163', 'Food': 'Cheese, Swiss (Emmental)', 'Calories': 190.0}
+2025-02-21 20:14:04.951 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:11.239401', 'Food': 'Cheese, Swiss, processed, thin slices', 'Calories': 70.0}
+2025-02-21 20:14:04.983 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:16.241435', 'Food': 'Chocolate milk, chocolate flavour powder + 2% milk', 'Calories': 207.0}
+2025-02-21 20:14:05.014 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:21.243794', 'Food': 'Chocolate milk, syrup + 2% milk', 'Calories': 238.0}
+2025-02-21 20:14:05.041 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:26.245753', 'Food': 'Coffee whitener, frozen liquid', 'Calories': 21.0}
+2025-02-21 20:14:05.073 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:31.248240', 'Food': 'Coffee whitener, powdered', 'Calories': 11.0}
+2025-02-21 20:14:05.103 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:36.250336', 'Food': 'Coffee whitener, powdered, light', 'Calories': 9.0}
+2025-02-21 20:14:05.136 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:41.252756', 'Food': 'Cream, Half and half, 10% M.F.', 'Calories': 18.0}
+2025-02-21 20:14:05.165 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:46.255208', 'Food': 'Cream, Whipped, pressurized', 'Calories': 39.0}
+2025-02-21 20:14:05.193 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:51.257519', 'Food': 'Dessert topping, frozen', 'Calories': 60.0}
+2025-02-21 20:14:05.223 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:11:56.260478', 'Food': 'Dessert topping, frozen, low fat', 'Calories': 42.0}
+2025-02-21 20:14:05.258 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:01.262539', 'Food': 'Dessert topping, powdered, prepared with 2% milk', 'Calories': 37.0}
+2025-02-21 20:14:05.308 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:06.264614', 'Food': 'Dessert topping, pressurized', 'Calories': 47.0}
+2025-02-21 20:14:05.345 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:11.267036', 'Food': 'Drinkable yogourt', 'Calories': 145.0}
+2025-02-21 20:14:05.385 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:16.269262', 'Food': 'Eggnog', 'Calories': 362.0}
+2025-02-21 20:14:05.415 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:21.271312', 'Food': 'Fresh cheese (DanimalTM, MinigoTM)', 'Calories': 68.0}
+2025-02-21 20:14:05.449 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:26.273870', 'Food': 'Hot chocolate, aspartame sweetened, powder + water', 'Calories': 78.0}
+2025-02-21 20:14:05.485 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:31.275845', 'Food': 'Hot chocolate, homemade with cocoa + 2% milk', 'Calories': 203.0}
+2025-02-21 20:14:05.524 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:36.278149', 'Food': 'Hot chocolate, powder + 2% milk', 'Calories': 255.0}
+2025-02-21 20:14:05.568 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:41.281207', 'Food': 'Hot chocolate, powder + water', 'Calories': 160.0}
+2025-02-21 20:14:05.604 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:46.283836', 'Food': 'Instant breakfast powder + 2% milk', 'Calories': 260.0}
+2025-02-21 20:14:05.637 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:51.286038', 'Food': 'Kefir, plain', 'Calories': 104.0}
+2025-02-21 20:14:05.673 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:12:56.288171', 'Food': 'Milk shake, chocolate', 'Calories': 296.0}
+2025-02-21 20:14:05.704 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:01.290396', 'Food': 'Milk shake, vanilla', 'Calories': 279.0}
+2025-02-21 20:14:05.734 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:06.293227', 'Food': 'Milk, chocolate, 1% M.F.', 'Calories': 166.0}
+2025-02-21 20:14:05.763 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:11.295287', 'Food': 'Milk, chocolate, 2% M.F.', 'Calories': 190.0}
+2025-02-21 20:14:05.791 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:16.297466', 'Food': 'Milk, condensed, sweetened, canned (Eagle BrandTM)', 'Calories': 62.0}
+2025-02-21 20:14:05.819 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:21.299682', 'Food': 'Milk, evaporated, partly skimmed, canned, diluted, 2% M.F.', 'Calories': 122.0}
+2025-02-21 20:14:05.854 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:26.301637', 'Food': 'Milk, evaporated, partly skimmed, canned, undiluted, 2% M.F.', 'Calories': 15.0}
+2025-02-21 20:14:05.883 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:31.304118', 'Food': 'Milk, evaporated, skim, canned, diluted, 0.2% M.F.', 'Calories': 105.0}
+2025-02-21 20:14:05.901 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:36.306356', 'Food': 'Milk, evaporated, skim, canned, undiluted, 0.2% M.F.', 'Calories': 13.0}
+2025-02-21 20:14:05.938 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:41.308336', 'Food': 'Milk, evaporated, whole, canned, diluted, 7.8% M.F.', 'Calories': 178.0}
+2025-02-21 20:14:05.965 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:46.310415', 'Food': 'Milk, evaporated, whole, canned, undiluted, 7.8% M.F.', 'Calories': 21.0}
+2025-02-21 20:14:05.991 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:51.316826', 'Food': 'Milk, partly skimmed, 1% M.F.', 'Calories': 108.0}
+2025-02-21 20:14:06.018 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:13:56.322377', 'Food': 'Milk, partly skimmed, 2% M.F.', 'Calories': 129.0}
+2025-02-21 20:14:06.044 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:01.324728', 'Food': 'Milk, partly skimmed, 2% M.F., with added milk solids', 'Calories': 146.0}
+2025-02-21 20:14:06.326 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:06.326523', 'Food': 'Milk, reconstituted, from skim milk powder', 'Calories': 86.0}
+2025-02-21 20:14:06.326 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:06.326523', 'Food': 'Milk, reconstituted, from skim milk powder', 'Calories': 86.0}
+2025-02-21 20:14:11.328 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:11.328649', 'Food': 'Milk, skim', 'Calories': 88.0}
+2025-02-21 20:14:11.332 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:11.328649', 'Food': 'Milk, skim', 'Calories': 88.0}
+2025-02-21 20:14:16.331 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:16.330900', 'Food': 'Milk, whole, 3.3% M.F.', 'Calories': 155.0}
+2025-02-21 20:14:16.334 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:16.330900', 'Food': 'Milk, whole, 3.3% M.F.', 'Calories': 155.0}
+2025-02-21 20:14:21.332 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:21.332783', 'Food': 'Pudding, All flavours, instant, from mix, prepared with 2% milk', 'Calories': 149.0}
+2025-02-21 20:14:21.332 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:21.332783', 'Food': 'Pudding, All flavours, instant, from mix, prepared with 2% milk', 'Calories': 149.0}
+2025-02-21 20:14:26.335 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:26.334981', 'Food': 'Pudding, Chocolate, ready-to-eat', 'Calories': 138.0}
+2025-02-21 20:14:26.337 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:26.334981', 'Food': 'Pudding, Chocolate, ready-to-eat', 'Calories': 138.0}
+2025-02-21 20:14:31.337 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:31.336990', 'Food': 'Pudding, Chocolate, ready-to-eat, fat-free', 'Calories': 96.0}
+2025-02-21 20:14:31.340 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:31.336990', 'Food': 'Pudding, Chocolate, ready-to-eat, fat-free', 'Calories': 96.0}
+2025-02-21 20:14:36.339 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:36.339283', 'Food': 'Pudding, Rice, homemade', 'Calories': 160.0}
+2025-02-21 20:14:36.339 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:36.339283', 'Food': 'Pudding, Rice, homemade', 'Calories': 160.0}
+2025-02-21 20:14:41.341 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:41.341091', 'Food': 'Pudding, Rice, ready-to-eat', 'Calories': 161.0}
+2025-02-21 20:14:41.345 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:41.341091', 'Food': 'Pudding, Rice, ready-to-eat', 'Calories': 161.0}
+2025-02-21 20:14:46.343 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:46.342878', 'Food': 'Pudding, Tapioca, ready-to-eat', 'Calories': 118.0}
+2025-02-21 20:14:46.349 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:46.342878', 'Food': 'Pudding, Tapioca, ready-to-eat', 'Calories': 118.0}
+2025-02-21 20:14:51.345 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:51.344968', 'Food': 'Pudding, Tapioca, ready-to-eat, fat-free', 'Calories': 88.0}
+2025-02-21 20:14:51.345 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:51.344968', 'Food': 'Pudding, Tapioca, ready-to-eat, fat-free', 'Calories': 88.0}
+2025-02-21 20:14:56.349 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:14:56.347903', 'Food': 'Pudding, Vanilla, ready-to-eat', 'Calories': 128.0}
+2025-02-21 20:14:56.354 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:14:56.347903', 'Food': 'Pudding, Vanilla, ready-to-eat', 'Calories': 128.0}
+2025-02-21 20:15:01.350 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:01.350735', 'Food': 'Pudding, Vanilla, ready-to-eat, fat-free', 'Calories': 92.0}
+2025-02-21 20:15:01.356 | INFO     | __main__:process_message:149 - Processed JSON message: {'timestamp': '2025-02-22T02:15:01.350735', 'Food': 'Pudding, Vanilla, ready-to-eat, fat-free', 'Calories': 92.0}
+2025-02-21 20:15:06.352 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:06.352750', 'Food': 'Rice beverage, flavoured and unflavoured, enriched', 'Calories': 127.0}
+2025-02-21 20:15:11.355 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:11.355126', 'Food': 'Skim milk powder', 'Calories': 5.0}
+2025-02-21 20:15:12.313 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:15:12.716 | INFO     | __main__:main:190 - START consumer.
+2025-02-21 20:15:12.716 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:15:12.716 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:15:12.716 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:15:12.716 | INFO     | __main__:main:200 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:15:12.716 | INFO     | __main__:main:201 - Rolling window size: 10
+2025-02-21 20:15:12.716 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:15:12.716 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:15:12.850 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:15:12.850 | INFO     | __main__:main:208 - Polling messages from topic 'food_csv'...
+2025-02-21 20:15:13.170 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:06.352750', 'Food': 'Rice beverage, flavoured and unflavoured, enriched', 'Calories': 127.0}
+2025-02-21 20:15:13.422 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:11.355126', 'Food': 'Skim milk powder', 'Calories': 5.0}
+2025-02-21 20:15:16.357 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:16.357956', 'Food': 'Sour cream, 14% M.F.', 'Calories': 22.0}
+2025-02-21 20:15:16.357 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:16.357956', 'Food': 'Sour cream, 14% M.F.', 'Calories': 22.0}
+2025-02-21 20:15:21.360 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:21.360205', 'Food': 'Sour cream, light, 5% M.F.', 'Calories': 21.0}
+2025-02-21 20:15:21.360 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:21.360205', 'Food': 'Sour cream, light, 5% M.F.', 'Calories': 21.0}
+2025-02-21 20:15:26.362 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:26.362351', 'Food': 'Soy beverage, chocolate, enriched', 'Calories': 162.0}
+2025-02-21 20:15:26.362 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:26.362351', 'Food': 'Soy beverage, chocolate, enriched', 'Calories': 162.0}
+2025-02-21 20:15:31.364 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:31.364402', 'Food': 'Soy beverage, original and vanilla, enriched', 'Calories': 110.0}
+2025-02-21 20:15:31.364 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:31.364402', 'Food': 'Soy beverage, original and vanilla, enriched', 'Calories': 110.0}
+2025-02-21 20:15:36.366 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:36.366599', 'Food': 'Soy beverage, unsweetened, enriched', 'Calories': 85.0}
+2025-02-21 20:15:36.366 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:36.366599', 'Food': 'Soy beverage, unsweetened, enriched', 'Calories': 85.0}
+2025-02-21 20:15:41.368 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:41.368746', 'Food': 'Table cream (coffee cream), 18% M.F.', 'Calories': 28.0}
+2025-02-21 20:15:41.373 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:41.368746', 'Food': 'Table cream (coffee cream), 18% M.F.', 'Calories': 28.0}
+2025-02-21 20:15:46.372 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:46.371130', 'Food': 'Whipping cream, 35% M.F., not whipped', 'Calories': 49.0}
+2025-02-21 20:15:46.376 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:46.371130', 'Food': 'Whipping cream, 35% M.F., not whipped', 'Calories': 49.0}
+2025-02-21 20:15:51.373 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:51.373211', 'Food': 'Whipping cream, 35% M.F., sweetened, whipped', 'Calories': 100.0}
+2025-02-21 20:15:51.377 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:51.373211', 'Food': 'Whipping cream, 35% M.F., sweetened, whipped', 'Calories': 100.0}
+2025-02-21 20:15:56.376 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:15:56.375397', 'Food': 'Yogourt parfait with berries and granola', 'Calories': 233.0}
+2025-02-21 20:16:01.377 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:01.377746', 'Food': 'Yogourt, plain, 1-2% M.F.', 'Calories': 114.0}
+2025-02-21 20:16:06.380 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:06.380326', 'Food': 'Yogourt, plain, 2-4% M.F.', 'Calories': 129.0}
+2025-02-21 20:16:11.383 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:11.383248', 'Food': 'Yogourt, plain, fat-free', 'Calories': 79.0}
+2025-02-21 20:16:16.385 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:16.385529', 'Food': 'Yogourt, vanilla or fruit, 1-2% M.F.', 'Calories': 183.0}
+2025-02-21 20:16:21.387 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:21.387397', 'Food': 'Yogourt, vanilla or fruit, fat-free', 'Calories': 116.0}
+2025-02-21 20:16:26.390 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:26.390112', 'Food': 'Yogourt, vanilla or fruit, fat-free with sugar substitute', 'Calories': 94.0}
+2025-02-21 20:16:31.392 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:31.392614', 'Food': 'Egg substitute, frozen (yolk replaced), cooked', 'Calories': 226.0}
+2025-02-21 20:16:36.395 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:36.395224', 'Food': 'Egg white, cooked', 'Calories': 16.0}
+2025-02-21 20:16:39.836 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:16:40.351 | INFO     | __main__:main:190 - START consumer.
+2025-02-21 20:16:40.351 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:16:40.351 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:16:40.351 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:16:40.351 | INFO     | __main__:main:200 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:16:40.351 | INFO     | __main__:main:201 - Rolling window size: 10
+2025-02-21 20:16:40.351 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:16:40.351 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:16:40.488 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:16:40.488 | INFO     | __main__:main:208 - Polling messages from topic 'food_csv'...
+2025-02-21 20:16:40.620 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:15:56.375397', 'Food': 'Yogourt parfait with berries and granola', 'Calories': 233.0}
+2025-02-21 20:16:40.620 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:15:56.375397", "Food": "Yogourt parfait with berries and granola", "Calories": 233.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.636 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:01.377746', 'Food': 'Yogourt, plain, 1-2% M.F.', 'Calories': 114.0}
+2025-02-21 20:16:40.636 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:01.377746", "Food": "Yogourt, plain, 1-2% M.F.", "Calories": 114.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.640 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:06.380326', 'Food': 'Yogourt, plain, 2-4% M.F.', 'Calories': 129.0}
+2025-02-21 20:16:40.641 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:06.380326", "Food": "Yogourt, plain, 2-4% M.F.", "Calories": 129.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.643 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:11.383248', 'Food': 'Yogourt, plain, fat-free', 'Calories': 79.0}
+2025-02-21 20:16:40.644 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:11.383248", "Food": "Yogourt, plain, fat-free", "Calories": 79.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.646 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:16.385529', 'Food': 'Yogourt, vanilla or fruit, 1-2% M.F.', 'Calories': 183.0}
+2025-02-21 20:16:40.647 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:16.385529", "Food": "Yogourt, vanilla or fruit, 1-2% M.F.", "Calories": 183.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.649 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:21.387397', 'Food': 'Yogourt, vanilla or fruit, fat-free', 'Calories': 116.0}
+2025-02-21 20:16:40.650 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:21.387397", "Food": "Yogourt, vanilla or fruit, fat-free", "Calories": 116.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.653 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:26.390112', 'Food': 'Yogourt, vanilla or fruit, fat-free with sugar substitute', 'Calories': 94.0}
+2025-02-21 20:16:40.654 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:26.390112", "Food": "Yogourt, vanilla or fruit, fat-free with sugar substitute", "Calories": 94.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.657 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:31.392614', 'Food': 'Egg substitute, frozen (yolk replaced), cooked', 'Calories': 226.0}
+2025-02-21 20:16:40.658 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:31.392614", "Food": "Egg substitute, frozen (yolk replaced), cooked", "Calories": 226.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:40.660 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:36.395224', 'Food': 'Egg white, cooked', 'Calories': 16.0}
+2025-02-21 20:16:40.661 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:36.395224", "Food": "Egg white, cooked", "Calories": 16.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:41.398 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:41.397350', 'Food': 'Egg yolk, cooked', 'Calories': 59.0}
+2025-02-21 20:16:41.404 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:41.397350', 'Food': 'Egg yolk, cooked', 'Calories': 59.0}
+2025-02-21 20:16:41.405 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:41.397350", "Food": "Egg yolk, cooked", "Calories": 59.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:46.399 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:46.399807', 'Food': 'Egg, fried', 'Calories': 173.0}
+2025-02-21 20:16:46.399 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:46.399807', 'Food': 'Egg, fried', 'Calories': 173.0}
+2025-02-21 20:16:46.399 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:46.399807", "Food": "Egg, fried", "Calories": 173.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:51.402 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:51.401986', 'Food': 'Egg, hard-boiled', 'Calories': 78.0}
+2025-02-21 20:16:51.408 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:51.401986', 'Food': 'Egg, hard-boiled', 'Calories': 78.0}
+2025-02-21 20:16:51.409 | ERROR    | __main__:process_message:174 - Error processing message '{"timestamp": "2025-02-22T02:16:51.401986", "Food": "Egg, hard-boiled", "Calories": 78.0}': 'float' object has no attribute 'append'
+2025-02-21 20:16:56.405 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:16:56.404265', 'Food': 'Egg, poached', 'Calories': 74.0}
+2025-02-21 20:17:01.426 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:01.425029', 'Food': 'Eggs benedict', 'Calories': 572.0}
+2025-02-21 20:17:04.374 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-02-21 20:17:04.927 | INFO     | __main__:main:190 - START consumer.
+2025-02-21 20:17:04.927 | INFO     | __main__:get_kafka_topic:53 - Kafka topic: food_csv
+2025-02-21 20:17:04.927 | INFO     | __main__:get_kafka_consumer_group_id:60 - Kafka consumer group id: smoker_group
+2025-02-21 20:17:04.927 | INFO     | __main__:get_rolling_window_size:73 - Rolling window size: 10
+2025-02-21 20:17:04.927 | INFO     | __main__:main:200 - Consumer: Topic 'food_csv' and group 'smoker_group'...
+2025-02-21 20:17:04.927 | INFO     | __main__:main:201 - Rolling window size: 10
+2025-02-21 20:17:04.927 | INFO     | utils.utils_producer:get_kafka_broker_address:50 - Kafka broker address: localhost:9092
+2025-02-21 20:17:04.927 | INFO     | utils.utils_consumer:create_kafka_consumer:44 - Creating Kafka consumer. Topic='food_csv' and group ID='smoker_group'.
+2025-02-21 20:17:05.078 | INFO     | utils.utils_consumer:create_kafka_consumer:59 - Kafka consumer created successfully.
+2025-02-21 20:17:05.078 | INFO     | __main__:main:208 - Polling messages from topic 'food_csv'...
+2025-02-21 20:17:05.774 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:16:56.404265', 'Food': 'Egg, poached', 'Calories': 74.0}
+2025-02-21 20:17:06.067 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:01.425029', 'Food': 'Eggs benedict', 'Calories': 572.0}
+2025-02-21 20:17:06.427 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:06.427387', 'Food': 'Eggs, scrambled, made with 2 eggs', 'Calories': 189.0}
+2025-02-21 20:17:06.431 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:06.427387', 'Food': 'Eggs, scrambled, made with 2 eggs', 'Calories': 189.0}
+2025-02-21 20:17:11.430 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:11.430137', 'Food': 'Omelet, cheese, made with 2 eggs', 'Calories': 273.0}
+2025-02-21 20:17:11.433 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:11.430137', 'Food': 'Omelet, cheese, made with 2 eggs', 'Calories': 273.0}
+2025-02-21 20:17:16.432 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:16.432356', 'Food': 'Omelet, spanish, made with 2 eggs (mushrooms, onions, green peppers, tomatoes)', 'Calories': 319.0}
+2025-02-21 20:17:16.434 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:16.432356', 'Food': 'Omelet, spanish, made with 2 eggs (mushrooms, onions, green peppers, tomatoes)', 'Calories': 319.0}
+2025-02-21 20:17:21.434 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:21.434398', 'Food': 'Omelet, western, made with 2 eggs (green peppers, ham, onions)', 'Calories': 237.0}
+2025-02-21 20:17:21.440 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:21.434398', 'Food': 'Omelet, western, made with 2 eggs (green peppers, ham, onions)', 'Calories': 237.0}
+2025-02-21 20:17:26.437 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:26.436931', 'Food': 'Beef and broccoli stir fry', 'Calories': 266.0}
+2025-02-21 20:17:26.437 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:26.436931', 'Food': 'Beef and broccoli stir fry', 'Calories': 266.0}
+2025-02-21 20:17:31.439 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:31.438862', 'Food': 'Breakfast bagel, with ham, egg and cheese', 'Calories': 483.0}
+2025-02-21 20:17:31.439 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:31.438862', 'Food': 'Breakfast bagel, with ham, egg and cheese', 'Calories': 483.0}
+2025-02-21 20:17:36.442 | INFO     | __main__:main:167 - Sent message to topic 'food_csv': {'timestamp': '2025-02-22T02:17:36.441327', 'Food': 'Breakfast biscuit with egg, cheese and bacon', 'Calories': 477.0}
+2025-02-21 20:17:36.445 | INFO     | __main__:process_message:151 - Processed JSON message: {'timestamp': '2025-02-22T02:17:36.441327', 'Food': 'Breakfast biscuit with egg, cheese and bacon', 'Calories': 477.0}
