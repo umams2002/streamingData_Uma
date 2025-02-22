@@ -1,10 +1,11 @@
 """
-project_json_consumer_uma.py
+streamingdata_consumer_uma.py
 
-Read a JSON-formatted file as it is being written. 
+Consume json messages from a Kafka topic and visualize author counts in real-time.
 
-Example JSON message:
-{"message": "I just saw a movie! It was amazing.", "author": "Eve"}
+Example Kafka message format:
+{"timestamp": "2025-01-11T18:15:00Z", "temperature": 225.0}
+
 """
 
 #####################################
@@ -12,46 +13,119 @@ Example JSON message:
 #####################################
 
 # Import packages from Python Standard Library
-import json
-import os # for file operations
-import sys # to exit early
-import time
-import pathlib
-from collections import defaultdict  # data structure for counting author occurrences
+import os
+import json  # handle JSON parsing
+
+# Use a deque ("deck") - a double-ended queue data structure
+# A deque is a good way to monitor a certain number of "most recent" messages
+# A deque is a great data structure for time windows (e.g. the last 5 messages)
+from collections import deque
+
+# Import external packages
+from dotenv import load_dotenv
 
 # IMPORTANT
 # Import Matplotlib.pyplot for live plotting
+# Use the common alias 'plt' for Matplotlib.pyplot
+# Know pyplot well
 import matplotlib.pyplot as plt
 
 # Import functions from local modules
+from utils.utils_consumer import create_kafka_consumer
 from utils.utils_logger import logger
 
-
 #####################################
-# Set up Paths - read from the file the producer writes
-#####################################
-
-PROJECT_ROOT = pathlib.Path(__file__).parent.parent
-DATA_FOLDER = PROJECT_ROOT.joinpath("data")
-DATA_FILE = DATA_FOLDER.joinpath("project_live.json")
-
-logger.info(f"Project root: {PROJECT_ROOT}")
-logger.info(f"Data folder: {DATA_FOLDER}")
-logger.info(f"Data file: {DATA_FILE}")
-
-#####################################
-# Set up data structures
+# Load Environment Variables
 #####################################
 
-author_counts = defaultdict(int)
-category_counts = defaultdict(int)
+load_dotenv()
+
+#####################################
+# Getter Functions for .env Variables
+#####################################
+
+
+def get_kafka_topic() -> str:
+    """Fetch Kafka topic from environment or use default."""
+    topic = os.getenv("SMOKER_TOPIC", "unknown_topic")
+    logger.info(f"Kafka topic: {topic}")
+    return topic
+
+
+def get_kafka_consumer_group_id() -> str:
+    """Fetch Kafka consumer group id from environment or use default."""
+    group_id: str = os.getenv("SMOKER_CONSUMER_GROUP_ID", "default_group")
+    logger.info(f"Kafka consumer group id: {group_id}")
+    return group_id
+
+
+def get_stall_threshold() -> float:
+    """Fetch message interval from environment or use default."""
+    temp_variation = float(os.getenv("SMOKER_STALL_THRESHOLD_F", 0.2))
+    return temp_variation
+
+
+def get_rolling_window_size() -> int:
+    """Fetch rolling window size from environment or use default."""
+    window_size = int(os.getenv("SMOKER_ROLLING_WINDOW_SIZE", 5))
+    logger.info(f"Rolling window size: {window_size}")
+    return window_size
+
+
+#####################################
+# Set up data structures (empty lists)
+#####################################
+
+timestamps = []  # To store timestamps for the x-axis
+temperatures = []  # To store temperature readings for the y-axis
 
 #####################################
 # Set up live visuals
 #####################################
 
+# Use the subplots() method to create a tuple containing
+# two objects at once:
+# - a figure (which can have many axis)
+# - an axis (what they call a chart in Matplotlib)
 fig, ax = plt.subplots()
-plt.ion()  # Turn on interactive mode for live updates
+
+# Use the ion() method (stands for "interactive on")
+# to turn on interactive mode for live updates
+plt.ion()
+
+
+#####################################
+# Define a function to detect a stall
+#####################################
+
+
+def detect_stall(rolling_window_deque: deque, window_size: int) -> bool:
+    """
+    Detect a temperature stall based on the rolling window.
+
+    Args:
+        rolling_window_deque (deque): Rolling window of temperature readings.
+
+    Returns:
+        bool: True if a stall is detected, False otherwise.
+    """
+    if len(rolling_window_deque) < window_size:
+        # We don't have a full deque yet
+        # Keep reading until the deque is full
+        logger.debug(
+            f"Rolling window current size: {len(rolling_window_deque)}. Waiting for {window_size}."
+        )
+        return False
+
+    # Once the deque is full we can calculate the temperature range
+    # Use Python's built-in min() and max() functions
+    # If the range is less than or equal to the threshold, we have a stall
+    # And our food is ready :)
+    temp_range = max(rolling_window_deque) - min(rolling_window_deque)
+    is_stalled: bool = temp_range <= get_stall_threshold()
+    if is_stalled:
+        logger.debug(f"Temperature range: {temp_range}°F. Stalled: {is_stalled}")
+    return is_stalled
 
 
 #####################################
@@ -60,42 +134,71 @@ plt.ion()  # Turn on interactive mode for live updates
 #####################################
 
 
-def update_chart():
-    """Update the live chart with the latest author counts."""
+def update_chart(rolling_window, window_size):
+    """
+    Update temperature vs. time chart.
+    Args:
+        rolling_window (deque): Rolling window of temperature readings.
+        window_size (int): Size of the rolling window.
+    """
     # Clear the previous chart
-    ax.clear()
+    ax.clear()  
 
-    # Get the authors and counts from the dictionary
-    category_list = list(category_counts.keys())
-    counts_list = list(category_counts.values())
+    # Create a line chart using the plot() method
+    # Use the timestamps for the x-axis and temperatures for the y-axis
+    # Use the label parameter to add a legend entry
+    # Use the color parameter to set the line color
+    ax.plot(timestamps, temperatures, label="Temperature", color="blue")
 
-    #color1 = ['red', 'seagreen', 'cornflowerblue', 'deeppink','lightgreen', 'orange','grass']
-    #title_font = {'family': 'serif','size': 16,'weight': 'bold'}
-
-    # Create a bar chart using the bar() method.
-    # Pass in the x list, the y list, and the color
-    #ax.pie(counts_list, labels=category_list, colors=color1, wedgeprops={'linewidth': 1, 'edgecolor': 'black'}, autopct="%1.1f%%")
-    #ax.legend(category_list, title="Categories", loc="upper left", bbox_to_anchor=(1, 0, 0.5, 1))
-
-    ax.bar(category_list, counts_list, color="lightgreen")
-    ax.legend(category_list, title="Categories", loc="upper left", bbox_to_anchor=(1, 0, 0.5, 1))
-    ax.set_ylabel("Message Counts")
-    ax.set_title("Basic Real-Time Category Breakdown Uma Subramanian")
-    ax.set_xlabel("Category")
-
-    
     # Use the built-in axes methods to set the labels and title
-    #ax.set_xlabel("Category")
-    #ax.set_ylabel("Message Counts")
-    #ax.set_title("Category Breakdown")
-    #ax.set_title("Basic Real-Time Category Breakdown Uma Subramanian")
+    ax.set_xlabel("Time")
+    ax.set_ylabel("Temperature (°F)")
+    ax.set_title("Smart Smoker: Temperature vs. Time Uma Subramanian")
 
-    # Use the set_xticklabels() method to rotate the x-axis labels
-    # Pass in the x list, specify the rotation angle is 45 degrees,
-    # and align them to the right
-    # ha stands for horizontal alignment
-   # ax.set_xticks(range(len(category_list))) 
-    #ax.set_xticklabels(category_list, rotation=45, ha="right")
+    # Highlight stall points if conditions are met such that
+    #    The rolling window is full and a stall is detected
+    if len(rolling_window) >= window_size and detect_stall(rolling_window, window_size):
+        # Mark the stall point on the chart
+
+        # An index of -1 gets the last element in a list
+        stall_time = timestamps[-1]
+        stall_temp = temperatures[-1]
+
+        # Use the scatter() method to plot a point
+        # Pass in the x value as a list, the y value as a list (using [])
+        # and set the marker color and label
+        # zorder is used to ensure the point is plotted on TOP of the line chart
+        # zorder of 5 is higher than the default zorder of 2
+        ax.scatter(
+            [stall_time], [stall_temp], color="red", label="Stall Detected", zorder=5
+        )
+
+        # Use the annotate() method to add a text label
+        # To learn more, look up the matplotlib axes.annotate documentation
+        # https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.annotate.html
+        # textcoords="offset points" means the label is placed relative to the point
+        # xytext=(10, -10) means the label is placed 10 points to the right and 10 points down from the point 
+        # Typically, the first number is x (horizontal) and the second is y (vertical)
+        # x: Positive moves to the right, negative to the left
+        # y: Positive moves up, negative moves down
+        # ha stands for horizontal alignment
+        # We set color to red, a common convention for warnings
+        ax.annotate(
+            "Stall Detected",
+            (stall_time, stall_temp),
+            textcoords="offset points",
+            xytext=(10, -10),
+            ha="center",
+            color="red",
+        )
+
+    # Regardless of whether a stall is detected, we want to show the legend
+
+    # Use the legend() method to display the legend
+    ax.legend()
+
+    # Use the autofmt_xdate() method to automatically format the x-axis labels as dates
+    fig.autofmt_xdate()
 
     # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
@@ -104,113 +207,112 @@ def update_chart():
     plt.draw()
 
     # Pause briefly to allow some time for the chart to render
-    plt.pause(0.01)
+    plt.pause(0.01)  
 
 
 #####################################
-# Process Message Function
-#####################################
+# Function to process a single message
+# #####################################
 
 
-def process_message(message: str) -> None:
+def process_message(message: str, rolling_window: deque, window_size: int) -> None:
     """
-    Process a single JSON message and update the chart.
+    Process a JSON-transferred CSV message and check for stalls.
 
     Args:
-        message (str): The JSON message as a string.
+        message (str): JSON message received from Kafka.
+        rolling_window (deque): Rolling window of temperature readings.
+        window_size (int): Size of the rolling window.
     """
     try:
         # Log the raw message for debugging
         logger.debug(f"Raw message: {message}")
 
         # Parse the JSON string into a Python dictionary
-        message_dict: dict = json.loads(message)
-      
-       
-        # Ensure the processed JSON is logged for debugging
-        logger.info(f"Processed JSON message: {message_dict}")
+        data: dict = json.loads(message)
+        temperature = data.get("temperature")
+        timestamp = data.get("timestamp")
+        logger.info(f"Processed JSON message: {data}")
 
-        # Ensure it's a dictionary before accessing fields
-        if isinstance(message_dict, dict):
-            # Extract the 'author' field from the Python dictionary
-            category = message_dict.get("category", "unknown")
-            logger.info(f"Message received for category: {category}")
+        # Ensure the required fields are present
+        if temperature is None or timestamp is None:
+            logger.error(f"Invalid message format: {message}")
+            return
 
-            # Increment the count for the author
-            category_counts[category] += 1
+        # Append the temperature reading to the rolling window
+        rolling_window.append(temperature)
 
-            # Log the updated counts
-            logger.info(f"Updated author counts: {dict(category_counts)}")
+        # Append the timestamp and temperature to the chart data
+        timestamps.append(timestamp)
+        temperatures.append(temperature)
 
-            # Update the chart
-            update_chart()
+        # Update chart after processing this message
+        update_chart(rolling_window=rolling_window, window_size=window_size)
 
-            # Log the updated chart
-            logger.info(f"Chart updated successfully for message: {message}")
+        # Check for a stall
+        if detect_stall(rolling_window, window_size):
+            logger.info(
+                f"STALL DETECTED at {timestamp}: Temp stable at {temperature}°F over last {window_size} readings."
+            )
 
-        else:
-            logger.error(f"Expected a dictionary but got: {type(message_dict)}")
-
-    except json.JSONDecodeError:
-        logger.error(f"Invalid JSON message: {message}")
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON decoding error for message '{message}': {e}")
     except Exception as e:
-        logger.error(f"Error processing message: {e}")
+        logger.error(f"Error processing message '{message}': {e}")
 
 
 #####################################
-# Main Function
+# Define main function for this module
 #####################################
 
 
 def main() -> None:
     """
     Main entry point for the consumer.
-    - Monitors a file for new messages and updates a live chart.
-    """
 
+    - Reads the Kafka topic name and consumer group ID from environment variables.
+    - Creates a Kafka consumer using the `create_kafka_consumer` utility.
+    - Polls messages and updates a live chart.
+    """
     logger.info("START consumer.")
 
-    # Verify the file we're monitoring exists if not, exit early
-    if not DATA_FILE.exists():
-        logger.error(f"Data file {DATA_FILE} does not exist. Exiting.")
-        sys.exit(1)
+    # Clear previous run's data
+    timestamps.clear()
+    temperatures.clear()
 
+    # fetch .env content
+    topic = get_kafka_topic()
+    group_id = get_kafka_consumer_group_id()
+    window_size = get_rolling_window_size()
+    logger.info(f"Consumer: Topic '{topic}' and group '{group_id}'...")
+    logger.info(f"Rolling window size: {window_size}")
+    rolling_window = deque(maxlen=window_size)
+
+    # Create the Kafka consumer using the helpful utility function.
+    consumer = create_kafka_consumer(topic, group_id)
+
+    # Poll and process messages
+    logger.info(f"Polling messages from topic '{topic}'...")
     try:
-        # Try to open the file and read from it
-        with open(DATA_FILE, "r") as file:
-
-            # Move the cursor to the end of the file
-            file.seek(0, os.SEEK_END)
-            print("Consumer is ready and waiting for new JSON messages...")
-
-            while True:
-                # Read the next line from the file
-                line = file.readline()
-
-                # If we strip whitespace from the line and it's not empty
-                if line.strip():  
-                    # Process this new message
-                    process_message(line)
-                else:
-                    # otherwise, wait a half second before checking again
-                    logger.debug("No new messages. Waiting...")
-                    delay_secs = 0.5 
-                    time.sleep(delay_secs) 
-                    continue 
-
+        for message in consumer:
+            message_str = message.value
+            logger.debug(f"Received message at offset {message.offset}: {message_str}")
+            process_message(message_str, rolling_window, window_size)
     except KeyboardInterrupt:
-        logger.info("Consumer interrupted by user.")
+        logger.warning("Consumer interrupted by user.")
     except Exception as e:
-        logger.error(f"Unexpected error: {e}")
+        logger.error(f"Error while consuming messages: {e}")
     finally:
-        plt.ioff()
-        plt.show()
-        logger.info("Consumer closed.")
+        consumer.close()
+        logger.info(f"Kafka consumer for topic '{topic}' closed.")
 
 
 #####################################
 # Conditional Execution
 #####################################
 
+# Ensures this script runs only when executed directly (not when imported as a module).
 if __name__ == "__main__":
     main()
+    plt.ioff()  # Turn off interactive mode after completion
+    plt.show()
