@@ -5,15 +5,15 @@ We can analyze and visualize different types of streaming data as the informatio
 The producers don't change from streamingdata_Uma - they write the same information to a Kafka topic, except the csv producer for the smart smoker has been modified to not run continuously. It will stop after reading all the rows in the CSV file. 
 The consumers have been enhanced to add visualization. 
 
+Kakfa consumer will read the allr ows from csv file and produce a chart based on Food related to it proteins value.
+
 This project uses matplotlib and its animation capabilities for visualization. 
 
-It generates three applications:
+It generates CSV applications:
 
-1. A basic producer and consumer that exchange information via a dynamically updated file. 
-2. A JSON producer and consumer that exchange information via a Kafka topic. 
-3. A CSV producer and consumer that exchange information via a different Kafka topic. 
+1. A CSV producer and consumer that exchange information via a different Kafka topic. 
 
-All three applications produce live charts to illustrate the data. 
+All CSV applications produce live charts to illustrate the data. 
 
 ## Task 1. Use Tools from Module 1 and 2
 
