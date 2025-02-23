@@ -3,11 +3,13 @@ streamingdata_consumer_uma.py
 
 Consume json messages from a Kafka topic and visualize author counts in real-time.
 Example Kafka message format:
-{
-    "timestamp": "2025-02-04T21:14:24.892093",
-    "Food": "Angelfood, commercial (25cm diam)",
-    "Calories": 73.0
-}
+{'timestamp': '2025-02-23T02:28:34.746539', 
+'Food': 'Apple, commercial, 2 crust (23cm diam)', 
+'Calories': '296', 
+'Protein': '2', 
+'Fat': '14', 
+'Carbs': '43',
+'Fibre': '2.0'}
 """
 
 #####################################

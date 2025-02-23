@@ -105,7 +105,12 @@ def generate_messages(file_path: pathlib.Path):
                 message = {
                     "timestamp": current_timestamp,
                     "Food": row["Food Item"],
-                    "Calories": float(row["Calories"]),
+                    "Calories": row["Calories"],
+                    "Protein": row["Protein"],
+                    "Fat": row["Fat"],
+                    "Carbs": row["Carbs"],
+                    "Fibre": row["Fibre"]
+                    
                 }
                 logger.debug(f"Generated message: {message}")
                 yield message
