@@ -160,7 +160,8 @@ def process_message(message: str, rolling_window: deque, window_size: int) -> No
 
         # Parse the JSON string into a Python dictionary
         data: dict = json.loads(message)
-        food = data.get("Food")
+        food_list = data.get("Food")
+        food = food_list.split(",")[0]
         protein = data.get("Protein")
         logger.info(f"Processed JSON message: {data}")
 

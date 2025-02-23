@@ -105,6 +105,7 @@ def generate_messages(file_path: pathlib.Path):
                 message = {
                     "timestamp": current_timestamp,
                     "Food": row["Food Item"],
+                   # "Category": row["Category"],
                     "Calories": row["Calories"],
                     "Protein": row["Protein"],
                     "Fat": row["Fat"],
