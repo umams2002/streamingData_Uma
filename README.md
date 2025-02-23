@@ -66,13 +66,13 @@ Windows:
 
 ```shell
 .venv\Scripts\activate
-py -m producers.basic_json_producer_case
+py -m producers.streamingdata_producer_uma
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.basic_json_producer_case
+python3 -m producers.streamingdata_producer_uma
 ```
 
 ### Consumer Terminal
@@ -85,13 +85,13 @@ Use the commands below to activate .venv, and start the consumer.
 Windows:
 ```shell
 .venv\Scripts\activate
-py -m consumers.basic_json_consumer_case
+py -m consumers.streamingdata_consumer_uma
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.basic_json_consumer_case
+python3 -m consumers.streamingdata_consumer_uma
 ```
 
 ### Review the Application Code
@@ -151,6 +151,8 @@ For each one, you will need to:
 5. Know the full name of the module you want to run. 
    - Look in the producers folder for csv_producer_case.
    - Look in the consumers folder for csv_consumer_case.
+  
+
 
 ### Review the Application Code
 
@@ -198,15 +200,7 @@ See the [LICENSE](LICENSE.txt) file for more.
 
 ## Live Chart Examples
 
-Live Bar Chart (JSON file streaming)
-
-![Basic JSON (file-exchange)](images/live_bar_chart_basic_example.jpg)
-
-Live Bar Chart (Kafka JSON streaming)
-
-![JSON (Kafka)](images/live_bar_chart_example.jpg)
-
 Live Line Chart with Alert (Kafka CSV streaming)
 
-![CSV (Kafka)](images/live_line_chart_example.jpg)
+![CSV (Kafka)](images/FoodvsProteins.png)
 

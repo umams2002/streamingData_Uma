@@ -118,7 +118,7 @@ def update_chart(rolling_window, window_size):
     # Use the timestamps for the x-axis and temperatures for the y-axis
     # Use the label parameter to add a legend entry
     # Use the color parameter to set the line color
-    ax.plot(foods, proteins, label="Temperature", color="blue")
+    ax.plot(foods, proteins, label="Proteins", color="blue")
 
     # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Food")
