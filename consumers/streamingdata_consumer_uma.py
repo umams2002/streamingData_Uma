@@ -12,6 +12,7 @@ Example Kafka message format:
 'Fibre': '2.0'}
 """
 
+
 #####################################
 # Import Modules
 #####################################
@@ -80,9 +81,8 @@ def get_rolling_window_size() -> int:
 # Set up data structures (empty lists)
 #####################################
 
-timestamps = []  # To store timestamps for the x-axis
-foods = []  # To store food items
-calories = []  # To store calories value
+foods = []  # To store food for the x-axis
+proteins = []  # To store proteins for the y-axis
 
 #####################################
 # Set up live visuals
@@ -100,31 +100,49 @@ plt.ion()
 
 
 
+
 #####################################
 # Define an update chart function for live plotting
 # This will get called every time a new message is processed
 #####################################
 
 
-def update_chart(rolling_window: deque, window_size: int) -> None:
+def update_chart(rolling_window, window_size):
     """
-    Update the live chart with the latest data.
+    Update the live chart with new data.
     """
-    # Clear the current plot
-    # This is important to avoid overlapping lines
-    # and to keep the chart clean
-    ax.clear()
-    ax.bar(foods, calories)
-    # Set the title and labels
-    # ax.set_title("Food and Calories")
+    # Clear the previous chart
+    ax.clear()  
+
+    # Create a line chart using the plot() method
+    # Use the timestamps for the x-axis and temperatures for the y-axis
+    # Use the label parameter to add a legend entry
+    # Use the color parameter to set the line color
+    ax.plot(foods, proteins, label="Temperature", color="blue")
+
+    # Use the built-in axes methods to set the labels and title
     ax.set_xlabel("Food")
-    ax.set_ylabel("Calories")
-    # Set the x-axis labels to be rotated for readability
-    ax.set_xticklabels(foods, rotation=45)
-    # Draw the chart
-    plt.draw()  
+    ax.set_ylabel("Proteins")
+    ax.set_title("Food Smoker: Food vs. Proteins Uma Subramanian")
+
+    
+
+    # Regardless of whether a stall is detected, we want to show the legend
+
+    # Use the legend() method to display the legend
+    ax.legend()
+
+    # Use the autofmt_xdate() method to automatically format the x-axis labels as dates
+    fig.autofmt_xdate()
+
+    # Use the tight_layout() method to automatically adjust the padding
     plt.tight_layout()
-    plt.pause(0.01)
+
+    # Draw the chart
+    plt.draw()
+
+    # Pause briefly to allow some time for the chart to render
+    plt.pause(0.01)  
 
 
 #####################################
@@ -134,12 +152,7 @@ def update_chart(rolling_window: deque, window_size: int) -> None:
 
 def process_message(message: str, rolling_window: deque, window_size: int) -> None:
     """
-    Process a JSON-transferred CSV message and check for stalls.
-
-    Args:
-        message (str): JSON message received from Kafka.
-        rolling_window (deque): Rolling window of temperature readings.
-        window_size (int): Size of the rolling window.
+    Process a single JSON message from Kafka.
     """
     try:
         # Log the raw message for debugging
@@ -147,28 +160,26 @@ def process_message(message: str, rolling_window: deque, window_size: int) -> No
 
         # Parse the JSON string into a Python dictionary
         data: dict = json.loads(message)
-        timestamp = data.get("timestamp")
         food = data.get("Food")
-        calories = data.get("Calories")
+        protein = data.get("Protein")
         logger.info(f"Processed JSON message: {data}")
 
         # Ensure the required fields are present
-        if food is None or timestamp is None:
+        if food is None or protein is None:
             logger.error(f"Invalid message format: {message}")
             return
 
-        # Append the temperature reading to the rolling window
+        # Append the message to the rolling window
         rolling_window.append(food)
 
-        # Append the timestamp and temperature to the chart data
-       
-        #timestamp.append(timestamp)
-        #calories.append(calories)
+        # Append the message to the rolling window
+        foods.append(food)
+        proteins.append(protein)
 
         # Update chart after processing this message
-        update_chart(rolling_window, window_size)
+        update_chart(rolling_window=rolling_window, window_size=window_size)
 
-        
+       
 
     except json.JSONDecodeError as e:
         logger.error(f"JSON decoding error for message '{message}': {e}")
@@ -192,8 +203,8 @@ def main() -> None:
     logger.info("START consumer.")
 
     # Clear previous run's data
-    timestamps.clear()
     foods.clear()
+    proteins.clear()
 
     # fetch .env content
     topic = get_kafka_topic()
